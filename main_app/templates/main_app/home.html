@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container" style="padding: 30px">
+        <div class="jumbotron">
+          <h1 class="display-4">Welcome</h1>
+          <p class="lead">iEPM - Examination Management System (EMS)</p>
+          <hr class="my-4">
+          <a class="btn btn-primary btn-lg" href="{% url 'users:examiner_sign_up' %}" role="button">Examiner</a>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Student</a>
+        </div>
+
+        {% if user.is_authenticated %}
+            Hi {{ user.username }}!
+        {% else %}
+            <p>You are not logged in</p>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+
+            <input type="submit" class="btn btn-secondary" value="Log out">
+        </form>
+
+    </div>
+
+
+
+{% endblock %}
