@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Examiner Sign Up
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container" style="padding: 10px">
+
+        <h1 class="display-4" style="text-style: bold">Student Sign up</h1>
+        <p class="lead">Welcome new comers ^_^</p>
+        <div class="jumbotron" style="padding: 15px">
+            <div class="card card-body">
+                <form method="post">{% csrf_token %}
+                    {{ form|crispy }}
+
+                    <div style="text-align: right">
+                        <input type="submit" style="float: left" class="btn btn-success" value="Sign up">
+                        <span>Already Have An Account ?</span>
+                        <a class="btn btn-outline-primary" href="{% url 'users:student_login' %}">Login</a>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}

@@ -10,7 +10,18 @@
 
     <div class="container" style="padding: 10px">
 
-        <h1 class="display-4" style="text-style: bold">welcome ----- in examiner dashboard</h1>
+        <h1 class="display-4" style="text-style: bold; margin-bottom: 30px;">welcome {{ profile.slug }}, in examiner dashboard</h1>
+
+        <div class="card card-body">
+
+            <div class="list-group" style="width: 25%">
+              <a href="{% url 'users:add_exam' %}" class="list-group-item list-group-item-action list-group-item-primary">Add Exam</a>
+              <a href="#" class="list-group-item list-group-item-action list-group-item-success">All Exams</a>
+            </div>
+
+
+        </div>
+
 
     </div>
 

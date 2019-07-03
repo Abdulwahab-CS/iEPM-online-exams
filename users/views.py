@@ -1,25 +1,30 @@
 
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from .forms import ExaminerCreationForm, StudentCreationForm
+from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from .forms import AddExamForm
+from main_app.models import MyUser
+from django.shortcuts import get_object_or_404
 
 
 def home(request):
-    return HttpResponse("<h2>Woooow, You are playing with URLs ..</h2>")
+    my_user = MyUser.objects.get(user=request.user)
+    if my_user.is_examiner:
+        return HttpResponseRedirect("/users/examiner/" + my_user.slug + "/")
+    elif my_user.is_student:
+        return HttpResponseRedirect("/users/student/" + my_user.slug + "/")
 
 
 def examiner_sign_up(request):
+
     if request.method == 'POST':
-        form = ExaminerCreationForm(request.POST)
+        form = UserCreationForm(request.POST)
 
         if form.is_valid():
-
-            # make the 'is_examiner flag' is checked !!
-            form.save()
-
-            return redirect("/main/")
+            user = form.save()
+            MyUser.objects.get_or_create(user=user, is_examiner=True)
+            return redirect("/home")
     else:
         form = UserCreationForm()
 
@@ -29,26 +34,62 @@ def examiner_sign_up(request):
     return render(request, 'users/examiner_sign_up.html', data)
 
 
+def student_sign_up(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
 
-# def examiner_login(request):
-#     if request.method == 'POST':
-#         form = AuthenticationForm(request.POST)
-#         print(f"\n\n ------> Yes1 \n\n")
-#
-#         if form.is_valid():
-#
-#             print(f"\n\n ------> Yes2 \n\n")
-#             username = form.cleaned_data.get('username')
-#             password = form.cleaned_data.get('password')
-#             print(f"\n\n ------> username = {username}\npasswrod = {password} \n\n")
-#             user = authenticate(username=username, password=password)
-#             if user is not None:
-#                 login(request, user)
-#                 redirect('/main/')
-#     else:
-#         form = AuthenticationForm()
-#
-#     data = {
-#         'form': form
-#     }
-#     return render(request, 'users/examiner_login.html', data)
+        if form.is_valid():
+            user = form.save()
+            MyUser.objects.get_or_create(user=user, is_student=True)
+            return redirect("/home/")
+    else:
+        form = UserCreationForm()
+
+    data = {
+        'form': form
+    }
+    return render(request, 'users/student_sign_up.html', data)
+
+
+def examiner_profile(request, slug):
+
+    if request.method == 'POST':
+        profile = get_object_or_404(MyUser, slug=slug)
+
+        if profile.is_valid():
+            redirect('users/examiner_profile.html')
+
+    else:
+        profile = AuthenticationForm()
+
+    profile = get_object_or_404(MyUser, slug=slug)
+    data = {
+        'profile': profile
+    }
+    return render(request, 'users/examiner_profile.html', data)
+
+
+def student_profile(request, slug):
+
+    if request.method == 'POST':
+        profile = get_object_or_404(MyUser, slug=slug)
+
+        if profile.is_valid():
+            redirect('users/student_profile.html')
+
+    else:
+        profile = AuthenticationForm()
+
+    profile = get_object_or_404(MyUser, slug=slug)
+    data = {
+        'profile': profile
+    }
+    return render(request, 'users/student_profile.html', data)
+
+
+def add_exam(request):
+    add_exam_form = AddExamForm()
+    data = {
+        'addExamForm': add_exam_form
+    }
+    return render(request, 'users/add_exam.html', data)
