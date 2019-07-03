@@ -3,8 +3,9 @@ from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from .forms import AddExamForm
+
 from main_app.models import MyUser
+
 from django.shortcuts import get_object_or_404
 
 
@@ -24,7 +25,14 @@ def examiner_sign_up(request):
         if form.is_valid():
             user = form.save()
             MyUser.objects.get_or_create(user=user, is_examiner=True)
-            return redirect("/home")
+
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            return redirect('/users')
+
     else:
         form = UserCreationForm()
 
@@ -49,6 +57,36 @@ def student_sign_up(request):
         'form': form
     }
     return render(request, 'users/student_sign_up.html', data)
+
+
+def examiner_login(request):
+    # if request.method == 'POST':
+    #     form = ExaminerLoginForm(request.POST)
+    #
+    #     if form.is_valid():
+    #
+    #         username = form.cleaned_data.get('username')
+    #         password = form.cleaned_data.get('password')
+    #
+    #         user = authenticate(username=username, passwrod=password)
+    #
+    #         if user is not None:
+    #             login(request, user)
+    #             redirect('users:home')
+    #
+    # else:
+    #     form = ExaminerLoginForm()
+    #
+    # data = {
+    #     'form': form
+    # }
+    # return render(request, 'users/examiner_login.html', data)
+
+    pass
+
+
+def student_login(request):
+    pass
 
 
 def examiner_profile(request, slug):
@@ -86,10 +124,3 @@ def student_profile(request, slug):
     }
     return render(request, 'users/student_profile.html', data)
 
-
-def add_exam(request):
-    add_exam_form = AddExamForm()
-    data = {
-        'addExamForm': add_exam_form
-    }
-    return render(request, 'users/add_exam.html', data)

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% load static %}
+
+{% block title %}
+    All Exams
+{% endblock %}
+
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'main_app/css/all_exams.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="display-4" style="margin:10px; text-align:center;">All Exams</div>
+
+                <table class="table" style="text-align: center">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Exam Name</th>
+                            <th>Category</th>
+                            <th>Questions Number</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table_body">
+<!--                         <tr>-->
+<!--                            <td class="examsCounter">1</td>-->
+<!--                            <td>compiler</td>-->
+<!--                            <td>computer science</td>-->
+<!--                            <td>10</td>-->
+<!--                            <td><input type="button" class="btn btn-primary" value="Show">-->
+<!--                                <input type="button" class="btn btn-success" value="Manage Questions">-->
+<!--                                <input type="button" class="btn btn-danger" value="Delete">-->
+<!--                            </td>-->
+<!--                        </tr>-->
+
+                    {% for exam in exams %}
+                    <tr>
+                        <td class="examsCounter">{{ exam.id }}</td>
+                        <td>{{ exam.exam_name }}</td>
+                        <td>{{ exam.category }}</td>
+                        <td>-1</td>
+                        <td><input type="button" class="btn btn-outline-primary" value="Show">
+                            <input type="button" class="btn btn-outline-success" value="Manage Questions">
+                            <input type="button" class="btn btn-outline-danger" value="Delete">
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+
+                    </tbody>
+                </table>
+
+                <hr>
+                <a class="btn btn-primary" href="{% url 'main:add_exam' %}">Add Exam</a>
+<!--                <span><a href="{% url 'users:examiner_profile' exam.examiner.slug %}"  class="btn btn-secondary myBtn">Back</a></span>-->
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

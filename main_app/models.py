@@ -10,7 +10,7 @@ class Exam(models.Model):
     slug = models.SlugField(null=True, blank=True)
     category = models.CharField(max_length=255)
     exam_creation_date = models.DateTimeField(default=timezone.datetime.now())
-    published = models.BooleanField(default=False)
+    is_published = models.BooleanField(default=False)
     students = models.ManyToManyField(MyUser, related_name='+')
 
     def save(self, *args, **kwargs):

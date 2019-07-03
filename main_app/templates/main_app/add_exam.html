@@ -13,8 +13,8 @@
         <h1 class="display-4" style="text-style: bold">Add Exam</h1>
         <div class="jumbotron" style="padding: 15px">
             <div class="card card-body">
-                <form method="post">{% csrf_token %}
-                    {{ addExamForm|crispy }}
+                <form method="post" action="{% url 'main:add_exam' %}">{% csrf_token %}
+                    {{ form|crispy }}
                     <input type="submit" class="btn btn-success" value="Add">
                 </form>
             </div>
