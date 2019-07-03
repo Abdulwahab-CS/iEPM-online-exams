@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import AddExamForm
 from .models import Exam
+from django.http import HttpResponse
 
 
 def home(request):
@@ -18,8 +19,8 @@ def add_exam(request):
             # create new exam
             Exam.objects.get_or_create(examiner=request.user.myuser, exam_name=exam_name, category=category)
 
-            path = f"/users/examiner/{request.user.myuser.slug}/"
-            return redirect(path)
+            # path = f"/users/examiner/{request.user.myuser.slug}/"
+            return redirect('main:all_exams')
 
     else:
         form = AddExamForm()
@@ -35,6 +36,7 @@ def all_exams(request):
     exams = Exam.objects.all()
 
     data = {
-        'exams': exams
+        'exams': exams,
+        'current_user': request.user.myuser
     }
     return render(request, 'main_app/all_exams.html', data)
