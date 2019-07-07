@@ -12,6 +12,7 @@ class Exam(models.Model):
     exam_creation_date = models.DateTimeField(default=timezone.datetime.now())
     is_published = models.BooleanField(default=False)
     students = models.ManyToManyField(MyUser, related_name='+')
+    num_of_questions = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
         if not self.slug:

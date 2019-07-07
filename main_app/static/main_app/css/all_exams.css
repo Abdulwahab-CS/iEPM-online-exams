@@ -63,6 +63,9 @@ a, a:hover {
     color: white;
 }
 
+.btn {
+    margin: 3px;
+}
 
 .noExams {
     text-align: center;

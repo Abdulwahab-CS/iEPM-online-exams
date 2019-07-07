@@ -3,18 +3,17 @@ from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-
 from main_app.models import MyUser
-
 from django.shortcuts import get_object_or_404
+import sweetify
 
 
 def home(request):
     my_user = MyUser.objects.get(user=request.user)
     if my_user.is_examiner:
-        return HttpResponseRedirect("/users/examiner/" + my_user.slug + "/")
+        return HttpResponseRedirect("/users/examiners/" + my_user.slug + "/")
     elif my_user.is_student:
-        return HttpResponseRedirect("/users/student/" + my_user.slug + "/")
+        return HttpResponseRedirect("/users/students/" + my_user.slug + "/")
 
 
 def examiner_sign_up(request):
@@ -39,7 +38,7 @@ def examiner_sign_up(request):
     data = {
         'form': form
     }
-    return render(request, 'users/examiner_sign_up.html', data)
+    return render(request, 'users/examiners/examiner_sign_up.html', data)
 
 
 def student_sign_up(request):
@@ -49,14 +48,14 @@ def student_sign_up(request):
         if form.is_valid():
             user = form.save()
             MyUser.objects.get_or_create(user=user, is_student=True)
-            return redirect("/home/")
+            return redirect("main:home")
     else:
         form = UserCreationForm()
 
     data = {
         'form': form
     }
-    return render(request, 'users/student_sign_up.html', data)
+    return render(request, 'users/students/student_sign_up.html', data)
 
 
 def examiner_login(request):
@@ -68,7 +67,7 @@ def examiner_login(request):
     #         username = form.cleaned_data.get('username')
     #         password = form.cleaned_data.get('password')
     #
-    #         user = authenticate(username=username, passwrod=password)
+    #         user = authenticate(username=username, password=password)
     #
     #         if user is not None:
     #             login(request, user)
@@ -80,7 +79,7 @@ def examiner_login(request):
     # data = {
     #     'form': form
     # }
-    # return render(request, 'users/examiner_login.html', data)
+    # return render(request, 'users/examiners/examiner_login.html', data)
 
     pass
 
@@ -95,7 +94,7 @@ def examiner_profile(request, slug):
         profile = get_object_or_404(MyUser, slug=slug)
 
         if profile.is_valid():
-            redirect('users/examiner_profile.html')
+            redirect('users/examiners/examiner_profile.html')
 
     else:
         profile = AuthenticationForm()
@@ -104,7 +103,7 @@ def examiner_profile(request, slug):
     data = {
         'profile': profile
     }
-    return render(request, 'users/examiner_profile.html', data)
+    return render(request, 'users/examiners/examiner_profile.html', data)
 
 
 def student_profile(request, slug):
@@ -113,7 +112,7 @@ def student_profile(request, slug):
         profile = get_object_or_404(MyUser, slug=slug)
 
         if profile.is_valid():
-            redirect('users/student_profile.html')
+            redirect('users/students/student_profile.html')
 
     else:
         profile = AuthenticationForm()
@@ -122,5 +121,5 @@ def student_profile(request, slug):
     data = {
         'profile': profile
     }
-    return render(request, 'users/student_profile.html', data)
+    return render(request, 'users/students/student_profile.html', data)
 

@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
                 ('category', models.CharField(max_length=255)),
                 ('exam_creation_date', models.DateTimeField(default=datetime.datetime(2019, 7, 2, 10, 35, 21, 633707))),
                 ('published', models.BooleanField(default=False)),
-                ('examiner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='exams', to='users.MyUser')),
+                ('examiners', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='exams', to='users.MyUser')),
                 ('students', models.ManyToManyField(related_name='_exam_students_+', to='users.MyUser')),
             ],
         ),
@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('score', models.IntegerField()),
                 ('done_date', models.DateTimeField(default=datetime.datetime(2019, 7, 2, 10, 35, 21, 633707))),
                 ('exam', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='main_app.Exam')),
-                ('student', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='users.MyUser')),
+                ('students', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='users.MyUser')),
             ],
         ),
         migrations.CreateModel(

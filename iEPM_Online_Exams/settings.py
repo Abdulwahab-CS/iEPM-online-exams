@@ -130,3 +130,4 @@ AUTH_PROFILE_MODULE = 'users.MyUser'
 
 LOGIN_REDIRECT_URL = '/users'
 
+
