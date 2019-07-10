@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block title %}
+    <title>Show Exam</title>
+{% endblock %}
+
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'main_app/css/show_exam.css' %}">
+{% endblock %}
+
+
+{% block logout_in_navbar %}
+    <li class="nav-item mr-auto">
+        <a class="nav-link" href="{% url 'users:examiner_logout' %}">Logout</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+
+
+
+                <div class="card card-header" style="background-color:  #05668D;">
+                        <div class="info">Exam Name : <span id="eCode">{{ exam_name }}</span></div>
+                        <div class="info">Category : <span id="eName">{{ exam_category }}</span></div>
+                        <div class="info">Total Number of Questions : <span id="questionsNum">{{ questions_count }}</span></div>
+                    </div>
+
+                      <div id="allQuestinos_area">
+
+                          {% for question in questions %}
+
+                          <div class="question">
+                            <div class="question_body">
+                                Question <span>{{ forloop.counter }}</span> : <span>{{ question.body }}</span>
+                            </div>
+                            <div class="option">
+                                <span>1</span> - <span>{{ question.op1 }}</span>
+                            </div>
+                            <div class="option">
+                                <span>2</span> - <span>{{ question.op2 }}</span>
+                            </div>
+                            <div class="option">
+                                <span>3</span> - <span>{{ question.op3 }}</span>
+                            </div>
+                            <div class="option">
+                                <span>4</span> - <span>{{ question.op4 }}</span>
+                            </div>
+                            <div class="correct_answer">
+                                Correct Answer Number : <span>{{ question.correct_ans }}</span>
+                            </div>
+                          </div>
+
+
+
+                          <!-- <div class="question">
+                            <div class="question_body">
+                                Question <span>1</span> : <span>What is SLR in bottom-up parsing ?</span>
+                            </div>
+                            <div class="option">
+                                <span>1</span> - <span>demo option x</span>
+                            </div>
+                            <div class="option">
+                                <span>2</span> - <span>demo option y</span>
+                            </div>
+                            <div class="option">
+                                <span>3</span> - <span>demo option w</span>
+                            </div>
+                            <div class="option">
+                                <span>4</span> - <span>demo option z</span>
+                            </div>
+                            <div class="correct_answer">
+                                Correct Answer Number : <span>3</span>
+                            </div>
+                        </div> -->
+
+
+                          {% endfor %}
+                       </div>
+
+                    <span><a href="{% url 'main:all_exams' %}" id="backBtn" class="btn btn-secondary">&emsp;Back&emsp;</a></span>
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

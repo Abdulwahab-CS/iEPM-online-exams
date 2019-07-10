@@ -2,10 +2,11 @@
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm
+from .forms import MyUserCreationForm
 from main_app.models import MyUser
 from django.shortcuts import get_object_or_404
-import sweetify
+from django.contrib import messages
 
 
 def home(request):
@@ -19,21 +20,17 @@ def home(request):
 def examiner_sign_up(request):
 
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = MyUserCreationForm(request.POST)
 
         if form.is_valid():
             user = form.save()
             MyUser.objects.get_or_create(user=user, is_examiner=True)
 
-            username = form.cleaned_data.get('username')
-            password = form.cleaned_data.get('password1')
-
-            user = authenticate(username=username, password=password)
-            login(request, user)
-            return redirect('/users')
+            messages.success(request, f"Your account created successfully, Plz login :)")
+            return redirect('users:examiner_login')
 
     else:
-        form = UserCreationForm()
+        form = MyUserCreationForm()
 
     data = {
         'form': form
@@ -43,14 +40,17 @@ def examiner_sign_up(request):
 
 def student_sign_up(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = MyUserCreationForm(request.POST)
 
         if form.is_valid():
             user = form.save()
             MyUser.objects.get_or_create(user=user, is_student=True)
-            return redirect("main:home")
+
+            messages.success(request, f"Your account created successfully, Plz login :)")
+            return redirect('users:student_login')
+
     else:
-        form = UserCreationForm()
+        form = MyUserCreationForm()
 
     data = {
         'form': form
@@ -59,33 +59,61 @@ def student_sign_up(request):
 
 
 def examiner_login(request):
-    # if request.method == 'POST':
-    #     form = ExaminerLoginForm(request.POST)
-    #
-    #     if form.is_valid():
-    #
-    #         username = form.cleaned_data.get('username')
-    #         password = form.cleaned_data.get('password')
-    #
-    #         user = authenticate(username=username, password=password)
-    #
-    #         if user is not None:
-    #             login(request, user)
-    #             redirect('users:home')
-    #
-    # else:
-    #     form = ExaminerLoginForm()
-    #
-    # data = {
-    #     'form': form
-    # }
-    # return render(request, 'users/examiners/examiner_login.html', data)
 
-    pass
+    form = AuthenticationForm()
+
+    if request.method == 'POST':
+
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            messages.success(request, f"Welcome ( {username} )")
+            return redirect('users:home')
+
+        else:
+            messages.error(request, f"Invalid Username or Password !!")
+
+    data = {
+        'form': form
+    }
+    return render(request, 'users/examiners/examiner_login.html', data)
 
 
 def student_login(request):
-    pass
+
+    form = AuthenticationForm()
+
+    if request.method == 'POST':
+
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            login(request, user)
+            messages.success(request, f"Welcome ( {username} )")
+            return redirect('users:home')
+
+        else:
+            messages.error(request, f"Invalid Username or Password !!")
+
+    data = {
+        'form': form
+    }
+    return render(request, 'users/students/student_login.html', data)
+
+
+def examiner_logout(request):
+    logout(request)
+    messages.success(request, 'Logged out successfully')
+    return redirect('main:home')
+
+
+def student_logout(request):
+    logout(request)
+    messages.success(request, 'Logged out successfully')
+    return redirect('main:home')
 
 
 def examiner_profile(request, slug):
@@ -122,4 +150,5 @@ def student_profile(request, slug):
         'profile': profile
     }
     return render(request, 'users/students/student_profile.html', data)
+
 

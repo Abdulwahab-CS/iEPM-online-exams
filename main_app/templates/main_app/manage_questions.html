@@ -1,0 +1,238 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block title %}
+    <title>Manage Exam</title>
+{% endblock %}
+
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'main_app/css/manage_questions.css' %}">
+{% endblock %}
+
+
+{% block logout_in_navbar %}
+    <li class="nav-item mr-auto">
+        <a class="nav-link" href="{% url 'users:examiner_logout' %}">Logout</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container my_container">
+    <div class="row">
+        <div class="col">
+
+            <form method="post" action="#">{% csrf_token %}
+                <div class="input-group my_input_group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Exam Name : </span>
+                    </div>
+                    <input type="text" name="examName" value="{{ exam_name }}" class="form-control" disabled/>
+                </div>
+                <div class="input-group my_input_group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Category : </span>
+                    </div>
+                    <input type="text" name="examCategory" value="{{ exam_category }}" class="form-control" disabled/>
+                </div>
+
+                <span><a href="{% url 'main:all_exams' %}" id="backbtn" class="btn btn-secondary backBtn">Back</a></span>
+                <span><a href="#newQcollapse" id="addQuestion" class="btn btn-info addQBtb" data-toggle="collapse">Add New Question</a></span>
+            </form>
+
+
+            <!-- New Question Collapse -->
+            <div class="collapse" id="newQcollapse">
+                <div class="card card-body newQuestion_collapse" id="my_card">
+                <form method="post" action="{% url 'main:add_question' exam_id %}" autocomplete="off">{% csrf_token %}
+                       <div class="input-group newQ_my_input_group_collapsebody">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Question : </span>
+                            </div>
+                            <textarea id="newQ_body" name="newQ_body" class="form-control" aria-label="With textarea" required></textarea>
+                        </div>
+
+                        <div class="input-group my_input_group_collapse">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Option 1 : </span>
+                            </div>
+                            <input id="newQ_option1" name="newQ_option1" type="text" class="form-control" required/>
+                        </div>
+
+                        <div class="input-group my_input_group_collapse">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Option 2 : </span>
+                            </div>
+                            <input id="newQ_option2" name="newQ_option2" type="text" class="form-control" required/>
+                        </div>
+
+                        <div class="input-group my_input_group_collapse">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Option 3 : </span>
+                            </div>
+                            <input id="newQ_option3" name="newQ_option3" type="text" class="form-control" required/>
+                        </div>
+
+                        <div class="input-group my_input_group_collapse">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Option 4 : </span>
+                            </div>
+                            <input id="newQ_option4" name="newQ_option4" type="text" class="form-control" required/>
+                        </div>
+
+                        <div class="input-group my_input_group_collapse">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Correct Answer : </span>
+                            </div>
+                            <input id="newQ_correctA" name="newQ_correct_ans" type="number" class="form-control" required/>
+                        </div>
+
+                        <hr>
+
+                        <input type="hidden" id="exam_name_forTheNewQ" name="exam_name_forTheNewQ" value="">
+                        <input type="hidden" id="exam_code_forTheNewQ" name="exam_code_forTheNewQ" value="">
+
+                        <input id="add_new_question" type="submit" name="add_new_question" class="btn btn-success" value="Add Question">
+                   </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Questions List -->
+<div class="container QL_contianer">
+
+        <div class="col">
+
+            <h4 class="QL_header">Questions List</h4>
+
+            <div id="questionsList">
+
+            {% for question in questions %}
+
+              <div id="wholeQuestion-{{ forloop.counter }}">
+                <div id="question-{{ forloop.counter }}" class="question" data-toggle="collapse" data-target="#question-{{ forloop.counter }}-collapse">Question {{ forloop.counter }}</div>
+                <div class="collapse" id="question-{{ forloop.counter }}-collapse">
+                    <div class="card card-body question_collapse">
+                        <form method="post">
+                            <div class="input-group my_input_group_collapse">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Question : </span>
+                                </div>
+                                <textarea id="question-{{ forloop.counter }}-body" class="form-control" aria-label="With textarea" >{{ question.body }}</textarea>
+                            </div>
+                            <div class="input-group my_input_group_collapse">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Option 1 : </span>
+                                </div>
+                                <input id="question-{{ forloop.counter }}-option-1" value="{{ question.op1 }}" type="text" class="form-control" />
+                            </div>
+
+                            <div class="input-group my_input_group_collapse">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Option 2 : </span>
+                                </div>
+                                <input id="question-{{ forloop.counter }}-option-2" value="{{ question.op2 }}" type="text" class="form-control" />
+                            </div>
+
+                            <div class="input-group my_input_group_collapse">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Option 3 : </span>
+                                </div>
+                                <input id="question-{{ forloop.counter }}-option-3" value="{{ question.op3 }}" type="text" class="form-control" />
+                            </div>
+
+                            <div class="input-group my_input_group_collapse">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Option 4 : </span>
+                                </div>
+                                <input id="question-{{ forloop.counter }}-option-4" value="{{ question.op4 }}" type="text" class="form-control" />
+                            </div>
+                            <div class="input-group my_input_group_collapse">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Correct Answer : </span>
+                                </div>
+                                <input id="question-{{ forloop.counter }}-correctA" value="{{ question.correct_ans }}" type="number" class="form-control" />
+                            </div>
+                            <hr>
+                            <button id="updateQuestion-{{ forloop.counter }}-Btn" type="submit" class="btn btn-primary">Save</button>
+                            <button id="deleteQuestion-{{ forloop.counter }}-Btn" data_id="delete" type="button" class="btn btn-danger">Delete</button>
+                        </form>
+                     </div>
+                  </div>
+
+                </div>
+
+
+<!--                <div id="wholeQuestion-1">-->
+<!--                <div id="question-1" class="question" data-toggle="collapse" data-target="#question-1-collapse"><b>Question 1<b></div>-->
+<!--                <div class="collapse" id="question-1-collapse">-->
+<!--                    <div class="card card-body question_collapse">-->
+<!--                        <form>-->
+<!--                            <div class="input-group my_input_group_collapse">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    <span class="input-group-text">Question : </span>-->
+<!--                                </div>-->
+<!--                                <textarea id="question-1-body" class="form-control" aria-label="With textarea" ></textarea>-->
+<!--                            </div>-->
+<!--                            <div class="input-group my_input_group_collapse">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    <span class="input-group-text">Option 1 : </span>-->
+<!--                                </div>-->
+<!--                                <input id="question-1-option-1" type="text" class="form-control" />-->
+<!--                            </div>-->
+
+<!--                            <div class="input-group my_input_group_collapse">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    <span class="input-group-text">Option 2 : </span>-->
+<!--                                </div>-->
+<!--                                <input id="question-1-option-2" type="text" class="form-control" />-->
+<!--                            </div>-->
+
+<!--                            <div class="input-group my_input_group_collapse">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    <span class="input-group-text">Option 3 : </span>-->
+<!--                                </div>-->
+<!--                                <input id="question-1-option-3" type="text" class="form-control" />-->
+<!--                            </div>-->
+
+<!--                            <div class="input-group my_input_group_collapse">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    <span class="input-group-text">Option 4 : </span>-->
+<!--                                </div>-->
+<!--                                <input id="question-1-option-4" type="text" class="form-control" />-->
+<!--                            </div>-->
+<!--                            <div class="input-group my_input_group_collapse">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                    <span class="input-group-text">Correct Answer : </span>-->
+<!--                                </div>-->
+<!--                                <input id="question-1-correctA" type="number" class="form-control" />-->
+<!--                            </div>-->
+<!--                            <hr>-->
+<!--                            <button id="updateQuestion-1-Btn" type="submit" class="btn btn-primary updateQ_btn" disabled>Update</button>-->
+<!--                            <button id="deleteQuestion-1-Btn" data_id="delete" type="button" class="btn btn-danger deleteQ_btn" disabled>Delete</button>-->
+<!--                        </form>-->
+<!--                     </div>-->
+<!--                  </div>-->
+
+<!--                </div>-->
+
+
+            {% endfor %}
+
+            </div>
+
+        </div>
+
+</div>
+
+
+{% endblock %}

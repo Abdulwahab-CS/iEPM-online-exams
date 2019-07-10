@@ -128,6 +128,8 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 # to tell django that: 'MyUser' model is the extension to the User model for this project
 AUTH_PROFILE_MODULE = 'users.MyUser'
 
-LOGIN_REDIRECT_URL = '/users'
+LOGIN_REDIRECT_URL = 'users:home'
+LOGOUT_REDIRECT_URL = 'main:home'
+
 
 

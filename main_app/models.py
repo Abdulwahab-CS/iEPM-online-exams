@@ -25,11 +25,11 @@ class Exam(models.Model):
 
 class Question(models.Model):
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE)
-    body = models.CharField(max_length=4096)
-    ch1 = models.CharField(max_length=255)
-    ch2 = models.CharField(max_length=255)
-    ch3 = models.CharField(max_length=255)
-    ch4 = models.CharField(max_length=255)
+    body = models.TextField(max_length=4096)
+    op1 = models.CharField(max_length=255)
+    op2 = models.CharField(max_length=255)
+    op3 = models.CharField(max_length=255)
+    op4 = models.CharField(max_length=255)
     correct_ans = models.IntegerField()
 
     def __str__(self):

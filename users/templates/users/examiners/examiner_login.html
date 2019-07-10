@@ -11,11 +11,12 @@
     <div class="container" style="padding: 10px">
         <h1 class="display-4" style="text-style: bold">Examiner Login</h1>
         <p class="lead">Your most welcome</p>
-        <div class="jumbotron" style="padding: 15px">
+        <div class="jumbotron" style="padding: 15px; background-color: #ccc;">
             <div class="card card-body">
-                <form method="post">{% csrf_token %}
+                <form method="POST" action="{% url 'users:examiner_login' %}">{% csrf_token %}
                     {{ form|crispy }}
-                    <input type="submit" class="btn btn-success" value="Login">
+                    <input type="submit" class="btn btn-primary" value="Login">
+                    <a href="{% url 'users:examiner_sign_up' %}" class="btn btn-secondary">Back</a>
                 </form>
             </div>
 

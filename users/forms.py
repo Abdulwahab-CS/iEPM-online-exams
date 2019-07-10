@@ -5,6 +5,15 @@ from users.models import MyUser
 from main_app.models import Exam
 
 
+class MyUserCreationForm(UserCreationForm):
+
+    def __init__(self, *args, **kwargs):
+        super(MyUserCreationForm, self).__init__(*args, **kwargs)
+
+        for fieldname in ['username', 'password1', 'password2']:
+            self.fields[fieldname].help_text = None
+
+
 # class ExaminerCreationForm(UserCreationForm):
 #     class Meta:
 #         model = User

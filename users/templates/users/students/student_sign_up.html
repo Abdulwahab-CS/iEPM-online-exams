@@ -12,13 +12,14 @@
 
         <h1 class="display-4" style="text-style: bold">Student Sign up</h1>
         <p class="lead">Welcome new comers</p>
-        <div class="jumbotron" style="padding: 15px">
+        <div class="jumbotron" style="padding: 15px; background-color: #ccc;">
             <div class="card card-body">
                 <form method="post">{% csrf_token %}
                     {{ form|crispy }}
 
                     <div style="text-align: right">
                         <input type="submit" style="float: left" class="btn btn-success" value="Sign up">
+                        <a href="{% url 'main:home' %}" style="float: left; margin-left: 5px;" class="btn btn-secondary">Back</a>
                         <span>Already Have An Account ?</span>
                         <a class="btn btn-outline-primary" href="{% url 'users:student_login' %}">Login</a>
                     </div>
