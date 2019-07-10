@@ -58,8 +58,7 @@ def student_sign_up(request):
     return render(request, 'users/students/student_sign_up.html', data)
 
 
-def examiner_login(request):
-
+def the_login(request):
     form = AuthenticationForm()
 
     if request.method == 'POST':
@@ -78,30 +77,7 @@ def examiner_login(request):
     data = {
         'form': form
     }
-    return render(request, 'users/examiners/examiner_login.html', data)
-
-
-def student_login(request):
-
-    form = AuthenticationForm()
-
-    if request.method == 'POST':
-
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(username=username, password=password)
-        if user is not None:
-            login(request, user)
-            messages.success(request, f"Welcome ( {username} )")
-            return redirect('users:home')
-
-        else:
-            messages.error(request, f"Invalid Username or Password !!")
-
-    data = {
-        'form': form
-    }
-    return render(request, 'users/students/student_login.html', data)
+    return render(request, 'users/login.html', data)
 
 
 def examiner_logout(request):
