@@ -4,7 +4,8 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect
 from django.contrib.auth.forms import AuthenticationForm
 from .forms import MyUserCreationForm
-from main_app.models import MyUser
+from .models import MyUser
+from main_app.models import Exam
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 
@@ -27,7 +28,7 @@ def examiner_sign_up(request):
             MyUser.objects.get_or_create(user=user, is_examiner=True)
 
             messages.success(request, f"Your account created successfully, Plz login :)")
-            return redirect('users:examiner_login')
+            return redirect('users:login')
 
     else:
         form = MyUserCreationForm()
@@ -47,7 +48,7 @@ def student_sign_up(request):
             MyUser.objects.get_or_create(user=user, is_student=True)
 
             messages.success(request, f"Your account created successfully, Plz login :)")
-            return redirect('users:student_login')
+            return redirect('users:login')
 
     else:
         form = MyUserCreationForm()
@@ -58,7 +59,9 @@ def student_sign_up(request):
     return render(request, 'users/students/student_sign_up.html', data)
 
 
+# the reason behind using the name 'the_login' , 'the_logout' , is to not conflict with the built in login function
 def the_login(request):
+
     form = AuthenticationForm()
 
     if request.method == 'POST':
@@ -80,13 +83,7 @@ def the_login(request):
     return render(request, 'users/login.html', data)
 
 
-def examiner_logout(request):
-    logout(request)
-    messages.success(request, 'Logged out successfully')
-    return redirect('main:home')
-
-
-def student_logout(request):
+def the_logout(request):
     logout(request)
     messages.success(request, 'Logged out successfully')
     return redirect('main:home')
@@ -122,8 +119,12 @@ def student_profile(request, slug):
         profile = AuthenticationForm()
 
     profile = get_object_or_404(MyUser, slug=slug)
+
+    exams = Exam.objects.all()
+
     data = {
-        'profile': profile
+        'profile': profile,
+        'exams': exams
     }
     return render(request, 'users/students/student_profile.html', data)
 

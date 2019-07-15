@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
+
 from .forms import AddExamForm
 from .models import Exam, Question
 from django.shortcuts import get_object_or_404
@@ -176,3 +178,72 @@ def show_exam(request, exam_id):
     }
 
     return render(request, 'main_app/show_exam.html', data)
+
+
+def do_exam(request, exam_id):
+
+    if request.method == 'POST':
+        exam = Exam.objects.get(id=exam_id)
+        exam_name = exam.exam_name
+        exam_category = exam.category
+
+        questions = Question.objects.filter(exam=exam)
+        questions_count = len(questions)
+
+    data = {
+        'exam_id': exam_id,
+        'std_id': request.user.id,
+        'exam_name': exam_name,
+        'exam_category': exam_category,
+        'questions': questions,
+        'questions_count': questions_count
+    }
+
+    return render(request, 'main_app/do_exam.html', data)
+
+
+def update_question(request, exam_id, question_id):
+    if request.method == 'POST':
+
+        question = Question.objects.get(id=question_id)
+
+        q_body = request.POST.get(f'question-{question.id}-body')
+        op1 = request.POST.get(f'question-{question.id}-option-1')
+        op2 = request.POST.get(f'question-{question.id}-option-2')
+        op3 = request.POST.get(f'question-{question.id}-option-3')
+        op4 = request.POST.get(f'question-{question.id}-option-4')
+        correct_ans = request.POST.get(f'question-{question.id}-correctA')
+
+        question.body = q_body
+        question.op1 = op1
+        question.op2 = op2
+        question.op3 = op3
+        question.op4 = op4
+        question.correct_ans = correct_ans
+
+        question.save()
+        messages.success(request, "Question updated successfully")
+        return redirect('main:manage_questions', exam_id)
+
+
+def delete_question(request, exam_id, question_id):
+
+    question = get_object_or_404(Question, id=question_id)
+    question.delete()
+
+    messages.success(request, 'Question deleted successfully')
+    return redirect('main:manage_questions', exam_id)
+
+# Not completed:
+
+
+def submit_exam(request, exam_id, std_id):
+    return HttpResponse("<h2>YESSS !!</h2>")
+
+
+def submit_exam2(request):
+    if request.method == 'POST':
+
+        return HttpResponse("<h2>OHH YESSSSS , with POST  !!</h2>")
+
+    return HttpResponse("<h2>OHH YESSSSS !!</h2>")

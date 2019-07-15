@@ -12,8 +12,10 @@ urlpatterns = [
 
     path('login/', users_views.the_login, name='login'),
 
-    path('examiners/logout/', users_views.examiner_logout, name='examiner_logout'),
-    path('students/logout/', users_views.student_logout, name='student_logout'),
+    path('logout/', users_views.the_logout, name='logout'),
+
+    # path('examiners/logout/', users_views.examiner_logout, name='examiner_logout'),
+    # path('students/logout/', users_views.student_logout, name='student_logout'),
 
     path('examiners/<slug>/', users_views.examiner_profile, name='examiner_profile'),
     path('students/<slug>/', users_views.student_profile, name='student_profile'),

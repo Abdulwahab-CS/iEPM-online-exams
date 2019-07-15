@@ -16,7 +16,7 @@
 
 {% block logout_in_navbar %}
     <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:examiner_logout' %}">Logout</a>
+        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
     </li>
 {% endblock %}
 
@@ -87,7 +87,7 @@
                           {% endfor %}
                        </div>
 
-                    <span><a href="{% url 'main:all_exams' %}" id="backBtn" class="btn btn-secondary">&emsp;Back&emsp;</a></span>
+                    <span><a href="{% url 'main:all_exams' %}"  class="btn btn-secondary" id="backBtn">&emsp;Back&emsp;</a></span>
 
             </div>
         </div>

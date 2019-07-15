@@ -16,7 +16,7 @@
 
 {% block logout_in_navbar %}
     <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:examiner_logout' %}">Logout</a>
+        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
     </li>
 {% endblock %}
 
@@ -118,54 +118,60 @@
 
             {% for question in questions %}
 
-              <div id="wholeQuestion-{{ forloop.counter }}">
-                <div id="question-{{ forloop.counter }}" class="question" data-toggle="collapse" data-target="#question-{{ forloop.counter }}-collapse">Question {{ forloop.counter }}</div>
-                <div class="collapse" id="question-{{ forloop.counter }}-collapse">
+              <div id="wholeQuestion-{{ question.id }}">
+                <div id="question-{{ question.id }}" class="question" data-toggle="collapse" data-target="#question-{{ question.id }}-collapse">Question {{ forloop.counter }}</div>
+                <div class="collapse" id="question-{{ question.id }}-collapse">
                     <div class="card card-body question_collapse">
-                        <form method="post">
+
+                        <form method="post" action="{% url 'main:update_question' exam_id question.id %}">{% csrf_token %}
+
                             <div class="input-group my_input_group_collapse">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Question : </span>
                                 </div>
-                                <textarea id="question-{{ forloop.counter }}-body" class="form-control" aria-label="With textarea" >{{ question.body }}</textarea>
+                                <textarea name="question-{{ question.id }}-body" class="form-control" aria-label="With textarea" >{{ question.body }}</textarea>
                             </div>
                             <div class="input-group my_input_group_collapse">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Option 1 : </span>
                                 </div>
-                                <input id="question-{{ forloop.counter }}-option-1" value="{{ question.op1 }}" type="text" class="form-control" />
+                                <input name="question-{{ question.id }}-option-1" value="{{ question.op1 }}" type="text" class="form-control" />
                             </div>
 
                             <div class="input-group my_input_group_collapse">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Option 2 : </span>
                                 </div>
-                                <input id="question-{{ forloop.counter }}-option-2" value="{{ question.op2 }}" type="text" class="form-control" />
+                                <input name="question-{{ question.id }}-option-2" value="{{ question.op2 }}" type="text" class="form-control" />
                             </div>
 
                             <div class="input-group my_input_group_collapse">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Option 3 : </span>
                                 </div>
-                                <input id="question-{{ forloop.counter }}-option-3" value="{{ question.op3 }}" type="text" class="form-control" />
+                                <input name="question-{{ question.id }}-option-3" value="{{ question.op3 }}" type="text" class="form-control" />
                             </div>
 
                             <div class="input-group my_input_group_collapse">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Option 4 : </span>
                                 </div>
-                                <input id="question-{{ forloop.counter }}-option-4" value="{{ question.op4 }}" type="text" class="form-control" />
+                                <input name="question-{{ question.id }}-option-4" value="{{ question.op4 }}" type="text" class="form-control" />
                             </div>
                             <div class="input-group my_input_group_collapse">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text">Correct Answer : </span>
                                 </div>
-                                <input id="question-{{ forloop.counter }}-correctA" value="{{ question.correct_ans }}" type="number" class="form-control" />
+                                <input name="question-{{ question.id }}-correctA" value="{{ question.correct_ans }}" type="number" class="form-control" />
                             </div>
                             <hr>
-                            <button id="updateQuestion-{{ forloop.counter }}-Btn" type="submit" class="btn btn-primary">Save</button>
-                            <button id="deleteQuestion-{{ forloop.counter }}-Btn" data_id="delete" type="button" class="btn btn-danger">Delete</button>
+
+
+                            <button id="updateQuestion-{{ question.id }}-Btn" type="submit" class="btn btn-primary">Save</button>
+                            <a href="#" onclick="delete_question({{exam_id}}, {{question.id}}, {{ forloop.counter }})" class="btn btn-danger">Delete</a>
                         </form>
+
+
                      </div>
                   </div>
 
@@ -235,4 +241,8 @@
 </div>
 
 
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'main_app/js/manage_questions.js' %}"></script>
 {% endblock %}

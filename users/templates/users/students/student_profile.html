@@ -1,8 +1,21 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 
 {% block title %}
     <title>Profile</title>
+{% endblock %}
+
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'users/students/css/student_profile.css' %}">
+{% endblock %}
+
+
+{% block logout_in_navbar %}
+    <li class="nav-item mr-auto">
+        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
+    </li>
 {% endblock %}
 
 
@@ -12,7 +25,89 @@
 
         <h1 class="display-4" style="margin: 30px 0; font-size: 45px">Welcome <b>{{ profile.user.username }}</b>,</h1>
 
+        <div class="jumbotron" style="padding: 15px; background-color: #ccc;">
+            <div class="card card-body">
+
+                <!-- Button trigger modal -->
+                <div class="top">
+
+                    <h3>Select an Exam and GO !</h3>
+
+                    <button type="button" class="btn btn-primary startExamBtn" data-toggle="modal" data-target="#exampleModalCenter">
+                      Select Exam
+                    </button>
+                </div>
+
+<!--              <input id="submit" type="submit" name="createExamBtn" class="btn btn-primary btn-lg startExamBtn" value="Start Exam">-->
+            </div>
+        </div>
+
     </div>
+
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">All Exams</h5>
+
+          </div>
+          <div class="modal-body">
+
+
+
+              <table class="table" style="text-align: center">
+                    {% if exams %}
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Exam Name</th>
+                            <th>Category</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="table_body">
+                        {% for exam in exams %}
+                        <tr>
+                            <td class="examsCounter">{{ forloop.counter }}</td>
+                            <td>{{ exam.exam_name }}</td>
+                            <td>{{ exam.category }}</td>
+                            <td>
+                                <form method="post" action="{% url 'main:do_exam' exam.id %}">{% csrf_token %}
+                                    <input type="submit" class="btn btn-outline-primary" value="Start">
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% else %}
+
+                            <h4 class="noExams">No exams found</h4>
+
+                    {% endif %}
+
+
+                    </tbody>
+                </table>
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
 
 
 {% endblock %}

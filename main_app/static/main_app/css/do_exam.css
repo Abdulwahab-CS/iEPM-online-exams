@@ -13,7 +13,7 @@ font-size: 19px;
     margin: 30px auto;
     color: black;
 }
-#allQuestinos_area {
+#questoins_place {
     margin: 20px auto;
     padding: 0 25px 25px 25px;
 }
@@ -50,8 +50,4 @@ font-size: 19px;
 }
 .exitExamBtn {
     width: 150px;
-}
-
-.btn-secondary {
-    margin-bottom: 30px;
 }

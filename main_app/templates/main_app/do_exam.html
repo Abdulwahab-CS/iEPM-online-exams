@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    <title>Show Exam</title>
+{% endblock %}
+
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'main_app/css/do_exam.css' %}">
+{% endblock %}
+
+
+{% block logout_in_navbar %}
+    <li class="nav-item mr-auto">
+        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+
+
+
+                <div class="card card-header" style="background-color:  #05668D;">
+                    <div class="info" style="display:none">Exam ID : <span id="examID">{{ exam_id }}</span></div>
+                    <div class="info" style="display:none">Student ID : <span id="studentID">{{ std_id }}</span></div>
+
+                    <div class="info">Exam Name : <span id="examName">{{ exam_name }}</span></div>
+                    <div class="info">Category : <span id="examCategory">{{ exam_category }}</span></div>
+                    <div class="info">Total Number of Questions : <span id="questionsNum">{{ questions_count }}</span></div>
+                </div>
+
+                <form method="post">{% csrf_token %}
+                                    <!-- {% url 'main:submit_exam' exam_id std_id %} -->
+                  <div id="questoins_place">
+
+                    {% for question in questions %}
+
+
+                        <div class="question">
+                            <div class="question_body">
+                                <span class="question_number">Q{{ forloop.counter }} - </span>{{ question.body }}
+                            </div>
+                            <div class="radio option">
+                                <label><input type="radio" name="question-{{ forloop.counter }}-opts" value="1"> {{ question.op1 }}</label>
+                            </div>
+                            <div class="radio option">
+                                <label><input type="radio" name="question-{{ forloop.counter }}-opts" value="2"> {{ question.op2 }}</label>
+                            </div>
+                            <div class="radio option">
+                                <label><input type="radio" name="question-{{ forloop.counter }}-opts" value="3"> {{ question.op3 }}</label>
+                            </div>
+                            <div class="radio option">
+                                <label><input type="radio" name="question-{{ forloop.counter }}-opts" value="4"> {{ question.op4 }}</label>
+                            </div>
+                        </div>
+
+
+                        <!-- demo question
+                            <div class="question">
+                                <div class="question_body">
+                                    <span class="question_number">1</span> - What is top-down parsing in compiler course ?
+                                </div>
+                                <div class="radio option">
+                                    <label><input type="radio" name="question-1-opts" value="1"> Option 1 demo</label>
+                                </div>
+                                <div class="radio option">
+                                    <label><input type="radio" name="question-1-opts" value="2"> Option 2 demo</label>
+                                </div>
+                                <div class="radio option">
+                                    <label><input type="radio" name="question-1-opts" value="3"> Option 3 demo</label>
+                                </div>
+                                <div class="radio option">
+                                    <label><input type="radio" name="question-1-opts" value="4"> Option 4 demo</label>
+                            </div>
+                        </div> -->
+
+
+
+                    {% endfor %}
+
+                  </div> <!-- end questions list -->
+
+                  <input id="submitButton" type="button" onclick="submit_exam()" class="btn btn-primary submitBtn" value="Submit">
+                  <input type="button" onclick="exit_exam()" class="btn btn-outline-danger exitExamBtn" value="Exit Exam">
+
+                </form> <!-- end form -->
+
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'main_app/js/do_exam.js' %}"></script>
+{% endblock %}
