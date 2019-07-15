@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+.container {
+    padding: 10px;
+}
+
+.display-4 {
+    margin: 30px 0;
+    font-size: 45px
+}
+
+.jumbotron {
+    padding: 7px;
+    background-color: #004a7f;
+    box-shadow: 5px 5px gray;
+}
 
 #std_name {
     font-weight: bold;
@@ -14,24 +30,17 @@
     margin: 7px 0px;
 }
 
-
 .top {
     text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-.container {
-    padding: 10px;
+.top_statement {
+    font-family: 'Courgette', cursive;
 }
+
+
+
+
 
 th, td {
     text-align: center;
@@ -101,4 +110,3 @@ a, a:hover {
     background-color: lightgray;
     margin: 60px 0;
 }
-

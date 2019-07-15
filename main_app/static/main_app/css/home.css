@@ -1,5 +1,13 @@
 .my_jumbotron {
-    background-color: #eee;
-    border: 2px solid black;
-    box-shadow: 4px 4px gray;
+    background-color: #bbd8f8;
+    border: 3px solid black;
+    box-shadow: 6px 6px gray;
+}
+
+.display-4 {
+    font-weight: 500;
+}
+
+.lead {
+    font-weight: bold;
 }

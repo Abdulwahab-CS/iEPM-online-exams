@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+
 
 {% block title %}
     <title>Add Exam</title>
 {% endblock %}
 
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'main_app/css/add_exam.css' %}">
+{% endblock %}
 
 {% block logout_in_navbar %}
     <li class="nav-item mr-auto">
@@ -15,17 +21,16 @@
 
 {% block content %}
 
-    <div class="container" style="padding: 10px">
+    <div class="container" style="padding: 10px;">
 
         <h1 class="display-4" style="text-style: bold">Add Exam</h1>
-        <div class="jumbotron" style="padding: 15px">
-            <div class="card card-body">
+
+        <div class="my_container">
                 <form method="post" action="{% url 'main:add_exam' %}">{% csrf_token %}
                     {{ form|crispy }}
+                    <span><a href="{% url 'main:all_exams' %}" id="backbtn" class="btn btn-secondary backBtn">Back</a></span>
                     <input type="submit" class="btn btn-success" value="Add">
                 </form>
-            </div>
-
         </div>
     </div>
 

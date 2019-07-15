@@ -5,13 +5,30 @@
     <title>Login</title>
 {% endblock %}
 
+{% block custom_css %}
+
+<style>
+  .container {
+    padding: 10px;
+  }
+
+  .display-4, .lead{
+    font-weight: 400;
+  }
+
+  .jumbotron {
+    padding: 15px; background-color: #aaa;
+  }
+</style>
+
+{% endblock %}
 
 {% block content %}
 
-    <div class="container" style="padding: 10px">
-        <h1 class="display-4" style="text-style: bold">Login</h1>
+    <div class="container">
+        <h1 class="display-4">Login</h1>
         <p class="lead">Your most welcome</p>
-        <div class="jumbotron" style="padding: 15px; background-color: #ccc;">
+        <div class="jumbotron">
             <div class="card card-body">
                 <form method="POST" action="{% url 'users:login' %}">{% csrf_token %}
                     {{ form|crispy }}

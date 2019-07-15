@@ -2,41 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b6d63f-d338-46d1-a324-2c2f74d37b6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_app/static/main_app/css/do_exam.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_app/static/main_app/js/manage_questions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/users/static/users/students/css/student_profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/static/main_app/css/add_exam.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main_app/static/main_app/js/all_exams.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/iEPM_Online_Exams.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/iEPM_Online_Exams.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iEPM_Online_Exams/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/iEPM_Online_Exams/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/show_exam.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/show_exam.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/js/all_exams.js" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/js/do_exam.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/all_exams.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/all_exams.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/static/users/students/css/student_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/users/students/css/student_profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/templates/users/students/student_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/students/student_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify-2.0.0.dist-info/INSTALLER" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify-2.0.0.dist-info/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify-2.0.0.dist-info/METADATA" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify-2.0.0.dist-info/RECORD" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify-2.0.0.dist-info/WHEEL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify/__version__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify/encoder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify/sweetify.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify/templatetags/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify/templatetags/sweetify.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Lib/site-packages/sweetify/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/students/student_sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/students/student_sign_up.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +33,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+              <folding>
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -69,8 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/users/admin.py" />
-        <option value="$PROJECT_DIR$/main_app/admin.py" />
         <option value="$PROJECT_DIR$/users/templates/users/student_login.html" />
         <option value="$PROJECT_DIR$/main_app/__init__.py" />
         <option value="$PROJECT_DIR$/users/__init__.py" />
@@ -83,43 +83,45 @@
         <option value="$PROJECT_DIR$/users/templates/users/student_sign_up.html" />
         <option value="$PROJECT_DIR$/users/templates/users/student_profile.html" />
         <option value="$PROJECT_DIR$/users/templates/users/examiner_profile.html" />
-        <option value="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/css/all_exams.css" />
         <option value="$PROJECT_DIR$/templates/messages.html" />
         <option value="$PROJECT_DIR$/static/js/sweet_alert_messages.js" />
         <option value="$PROJECT_DIR$/static/js/sweetalert_messages.js" />
         <option value="$PROJECT_DIR$/main_app/models.py" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/manage_exam.html" />
-        <option value="$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css" />
-        <option value="$PROJECT_DIR$/main_app/forms.py" />
         <option value="$PROJECT_DIR$/users/forms.py" />
         <option value="$PROJECT_DIR$/users/templates/users/students/student_login.html" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/css/manage_questions.css" />
         <option value="$PROJECT_DIR$/users/templates/users/examiners/examiner_login.html" />
-        <option value="$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html" />
-        <option value="$PROJECT_DIR$/users/templates/users/students/student_sign_up.html" />
-        <option value="$PROJECT_DIR$/users/static/users/students/css/student_profile.css" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/css/do_exam.css" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/css/show_exam.css" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/users/urls.py" />
-        <option value="$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html" />
-        <option value="$PROJECT_DIR$/users/templates/users/students/student_profile.html" />
-        <option value="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" />
-        <option value="$PROJECT_DIR$/main_app/templates/main_app/all_exams.html" />
-        <option value="$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" />
         <option value="$PROJECT_DIR$/users/views.py" />
-        <option value="$PROJECT_DIR$/main_app/static/main_app/css/home.css" />
         <option value="$PROJECT_DIR$/iEPM_Online_Exams/settings.py" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/js/manage_questions.js" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" />
-        <option value="$PROJECT_DIR$/main_app/urls.py" />
-        <option value="$PROJECT_DIR$/main_app/views.py" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/js/do_exam.js" />
+        <option value="$PROJECT_DIR$/main_app/urls.py" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/home.html" />
+        <option value="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" />
+        <option value="$PROJECT_DIR$/main_app/forms.py" />
+        <option value="$PROJECT_DIR$/main_app/static/main_app/css/add_exam.css" />
+        <option value="$PROJECT_DIR$/main_app/templates/main_app/all_exams.html" />
+        <option value="$PROJECT_DIR$/main_app/views.py" />
+        <option value="$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html" />
+        <option value="$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css" />
+        <option value="$PROJECT_DIR$/main_app/static/main_app/js/all_exams.js" />
+        <option value="$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/students/student_sign_up.html" />
         <option value="$PROJECT_DIR$/users/templates/users/login.html" />
+        <option value="$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html" />
+        <option value="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" />
+        <option value="$PROJECT_DIR$/users/templates/users/students/student_profile.html" />
+        <option value="$PROJECT_DIR$/users/static/users/students/css/student_profile.css" />
+        <option value="$PROJECT_DIR$/main_app/static/main_app/css/home.css" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -152,6 +154,11 @@
               <item name="iEPM_Online_Exams" type="b2602c69:ProjectViewProjectNode" />
               <item name="iEPM_Online_Exams" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="iEPM_Online_Exams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iEPM_Online_Exams" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -162,6 +169,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/main_app/static/main_app/css" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -204,9 +212,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17767504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17755532" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -217,7 +226,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.46676096" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.46587217" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -259,9 +268,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main_app/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/users/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -286,23 +292,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/2006465955/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="5307" column="12" lean-forward="true" selection-start-line="5307" selection-start-column="12" selection-end-line="5307" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/signals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#46#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2019.1/system/python_stubs/2006465955/builtins.py" />
+    <entry file="file://$PROJECT_DIR$/users/signals.py" />
     <entry file="file://$PROJECT_DIR$/iEPM_Online_Exams/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -320,29 +311,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="642">
-          <caret line="62" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/messages.html" />
     <entry file="file://$PROJECT_DIR$/static/js/sweetalert_messages.js" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/shortcuts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="39" column="22" lean-forward="true" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#1#25#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -357,20 +331,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/students/student_login.html" />
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/manage_questions.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/manage_questions.css" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/contrib/auth/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="359">
@@ -396,40 +357,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/examiners/examiner_login.html" />
-    <entry file="file://$PROJECT_DIR$/users/templates/users/students/student_sign_up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="23" column="79" selection-start-line="23" selection-start-column="79" selection-end-line="23" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/static/users/students/css/student_profile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/show_exam.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="56" column="1" lean-forward="true" selection-start-line="56" selection-start-column="1" selection-end-line="56" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/do_exam.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="48" column="24" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/show_exam.css" />
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/do_exam.css" />
     <entry file="file://$PROJECT_DIR$/users/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -440,90 +369,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/all_exams.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="45" column="16" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/students/student_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/show_exam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/add_exam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/js/all_exams.js" />
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" />
     <entry file="file://$PROJECT_DIR$/users/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -541,13 +393,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -558,37 +403,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="170" column="116" selection-start-line="170" selection-start-column="116" selection-end-line="170" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/all_exams.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1141">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#0;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#form#1;n#td#4;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="101" column="18" lean-forward="true" selection-start-line="99" selection-start-column="4" selection-end-line="101" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html" />
     <entry file="file://$PROJECT_DIR$/main_app/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -599,98 +414,220 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/js/do_exam.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/do_exam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="743">
+          <caret line="104" column="14" lean-forward="true" selection-start-line="102" selection-end-line="104" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_app/static/main_app/js/manage_questions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="374">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="17" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_app/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="264">
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="61" selection-end-line="12" selection-end-column="70" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/all_exams.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="55" column="112" selection-start-line="55" selection-start-column="108" selection-end-line="55" selection-end-column="112" />
+          <folding>
+            <element signature="e#3037#3060#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/js/all_exams.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="238" lean-forward="true" selection-start-line="238" selection-end-line="238" />
+        <state relative-caret-position="275">
+          <caret line="147" lean-forward="true" selection-start-line="147" selection-end-line="147" />
           <folding>
-            <element signature="e#333#377#0" />
-            <element signature="e#408#1029#0" />
-            <element signature="e#445#889#0" />
-            <element signature="e#519#889#0" />
-            <element signature="e#942#970#0" />
-            <element signature="e#1061#1417#0" />
-            <element signature="e#1150#1227#0" />
-            <element signature="e#1240#1357#0" />
-            <element signature="e#1459#1745#0" />
-            <element signature="e#1520#1624#0" />
-            <element signature="e#1788#2159#0" />
-            <element signature="e#1953#2091#0" />
-            <element signature="e#2202#3026#0" />
-            <element signature="e#2240#3026#0" />
-            <element signature="e#3066#3346#0" />
-            <element signature="e#3179#3285#0" />
-            <element signature="e#3390#4209#0" />
-            <element signature="e#3427#4209#0" />
-            <element signature="e#3727#3802#0" />
-            <element signature="e#3854#3981#0" />
-            <element signature="e#4009#4209#0" />
-            <element signature="e#4257#4627#0" />
-            <element signature="e#4422#4560#0" />
-            <element signature="e#4667#5112#0" />
-            <element signature="e#4869#5051#0" />
-            <element signature="e#5151#5682#0" />
-            <element signature="e#5188#5393#0" />
-            <element signature="e#5406#5623#0" />
-            <element signature="e#5741#6569#0" />
-            <element signature="e#5779#6569#0" />
-            <element signature="e#6629#6823#0" />
+            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#347#391#0" />
+            <element signature="e#422#1043#0" />
+            <element signature="e#1075#1431#0" />
+            <element signature="e#1164#1241#0" />
+            <element signature="e#1254#1371#0" />
+            <element signature="e#1473#1759#0" />
+            <element signature="e#1534#1638#0" />
+            <element signature="e#1802#2173#0" />
+            <element signature="e#1967#2105#0" />
+            <element signature="e#2216#3040#0" />
+            <element signature="e#2254#3040#0" />
+            <element signature="e#3081#3574#0" />
+            <element signature="e#3900#4719#0" />
+            <element signature="e#4237#4312#0" />
+            <element signature="e#4364#4491#0" />
+            <element signature="e#4767#5137#0" />
+            <element signature="e#4932#5070#0" />
+            <element signature="e#5177#5622#0" />
+            <element signature="e#5379#5561#0" />
+            <element signature="e#5661#6192#0" />
+            <element signature="e#5698#5903#0" />
+            <element signature="e#5916#6133#0" />
+            <element signature="e#6251#7079#0" />
+            <element signature="e#6289#7079#0" />
+            <element signature="e#7139#7333#0" />
+            <element signature="e#7376#7534#0" />
+            <element signature="e#7603#7643#0" />
+            <element signature="e#7677#7826#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/do_exam.html">
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="619">
-          <caret line="90" column="66" selection-start-line="90" selection-start-column="66" selection-end-line="90" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/js/do_exam.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="484">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="36" />
           <folding>
-            <element signature="e#0#3901#0" />
+            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/home.html">
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/add_exam.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+        <state relative-caret-position="638">
+          <caret line="29" column="37" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/add_exam.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="3" lean-forward="true" selection-end-line="7" selection-end-column="3" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/users/templates/users/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+        <state relative-caret-position="704">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/students/student_sign_up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="7" selection-end-line="19" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h1#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/all_exams.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/templates/users/students/student_profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="5" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users/static/users/students/css/student_profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/static/main_app/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponseRedirect, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
-from .forms import AddExamForm
+from .forms import AddExamForm, EditExamForm
 from .models import Exam, Question
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
@@ -103,14 +103,17 @@ def add_question(request, exam_id):
 
 
 def edit_exam(request, exam_id):
+
+    form = EditExamForm()
+
     exam = Exam.objects.get(id=exam_id)
-    exam_name = exam.exam_name
-    exam_category = exam.category
+
+    form.initial['exam_name'] = exam.exam_name
+    form.initial['category'] = exam.category
 
     data = {
+        'form': form,
         'exam_id': exam_id,
-        'exam_name': exam_name,
-        'exam_category': exam_category
     }
 
     return render(request, 'main_app/edit_exam.html', data)
@@ -121,8 +124,8 @@ def do_edit_exam(request, exam_id):
     if request.method == 'POST':
         exam = Exam.objects.get(id=exam_id)
 
-        name = request.POST.get('examName')
-        category = request.POST.get('examCategory')
+        name = request.POST.get('exam_name')
+        category = request.POST.get('category')
 
         list = Exam.objects.filter(examiner=request.user.myuser).exclude(id=exam_id)
         found_exam_with_same_name = False
@@ -233,6 +236,16 @@ def delete_question(request, exam_id, question_id):
 
     messages.success(request, 'Question deleted successfully')
     return redirect('main:manage_questions', exam_id)
+
+
+def delete_exam(request, exam_id):
+
+    exam = get_object_or_404(Exam, id=exam_id)
+    exam.delete()
+
+    messages.success(request, 'Exam deleted successfully')
+    return redirect('main:all_exams')
+
 
 # Not completed:
 

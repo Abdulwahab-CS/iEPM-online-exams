@@ -40,17 +40,6 @@
                     </thead>
 
                     <tbody id="table_body">
-<!--                         <tr>-->
-<!--                            <td class="examsCounter">1</td>-->
-<!--                            <td>compiler</td>-->
-<!--                            <td>computer science</td>-->
-<!--                            <td>10</td>-->
-<!--                            <td><input type="button" class="btn btn-primary" value="Show">-->
-<!--                                <input type="button" class="btn btn-success" value="Manage Questions">-->
-<!--                                <input type="button" class="btn btn-danger" value="Delete">-->
-<!--                            </td>-->
-<!--                        </tr>-->
-
 
                         {% for exam in exams %}
                         <tr>
@@ -73,10 +62,8 @@
                                 </form>
 
                                 <form style="display: inline" method="post" action="{% url 'main:delete_exam' exam.id %}">{% csrf_token %}
-                                    <input type="submit" class="btn btn-outline-danger"  value="Delete">
+                                    <input type="button" onclick="delete_exam({{exam.id}}, '{{exam.exam_name}}')" class="btn btn-outline-danger" value="Delete">
                                 </form>
-
-
 
                             </td>
                         </tr>
@@ -99,4 +86,8 @@
     </div>
 
 
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'main_app/js/all_exams.js' %}"></script>
 {% endblock %}

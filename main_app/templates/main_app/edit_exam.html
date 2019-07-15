@@ -23,7 +23,7 @@
 
 {% block content %}
 
-    <div class="container ">
+<div class="container">
     <div class="row">
         <div class="col">
 
@@ -32,87 +32,20 @@
             <div class="my_container">
 
                 <form method="post" action="{% url 'main:do_edit_exam' exam_id %}">{% csrf_token %}
-                    <div class="input-group my_input_group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Exam Name : </span>
-                        </div>
-                        <input type="text" name="examName" value="{{ exam_name }}" class="form-control" />
-                    </div>
-                    <div class="input-group my_input_group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text">Category : </span>
-                        </div>
-                        <input type="text" name="examCategory" value="{{ exam_category }}" class="form-control"  />
-                    </div>
+                    {{ form.exam_name|as_crispy_field }}
+
+                    {{ form.category|as_crispy_field }}
 
                     <span><a href="{% url 'main:all_exams' %}" id="backbtn" class="btn btn-secondary backBtn">Back</a></span>
-                    <span><input type="submit" class="btn btn-success" value="Save"></span>
+                    <input type="submit" class="btn btn-success" value="Save">
 
                 </form>
 
             </div>
 
 
-
-
-<!--                <div id="wholeQuestion-1">-->
-<!--                <div id="question-1" class="question" data-toggle="collapse" data-target="#question-1-collapse"><b>Question 1<b></div>-->
-<!--                <div class="collapse" id="question-1-collapse">-->
-<!--                    <div class="card card-body question_collapse">-->
-<!--                        <form>-->
-<!--                            <div class="input-group my_input_group_collapse">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    <span class="input-group-text">Question : </span>-->
-<!--                                </div>-->
-<!--                                <textarea id="question-1-body" class="form-control" aria-label="With textarea" ></textarea>-->
-<!--                            </div>-->
-<!--                            <div class="input-group my_input_group_collapse">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    <span class="input-group-text">Option 1 : </span>-->
-<!--                                </div>-->
-<!--                                <input id="question-1-option-1" type="text" class="form-control" />-->
-<!--                            </div>-->
-
-<!--                            <div class="input-group my_input_group_collapse">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    <span class="input-group-text">Option 2 : </span>-->
-<!--                                </div>-->
-<!--                                <input id="question-1-option-2" type="text" class="form-control" />-->
-<!--                            </div>-->
-
-<!--                            <div class="input-group my_input_group_collapse">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    <span class="input-group-text">Option 3 : </span>-->
-<!--                                </div>-->
-<!--                                <input id="question-1-option-3" type="text" class="form-control" />-->
-<!--                            </div>-->
-
-<!--                            <div class="input-group my_input_group_collapse">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    <span class="input-group-text">Option 4 : </span>-->
-<!--                                </div>-->
-<!--                                <input id="question-1-option-4" type="text" class="form-control" />-->
-<!--                            </div>-->
-<!--                            <div class="input-group my_input_group_collapse">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    <span class="input-group-text">Correct Answer : </span>-->
-<!--                                </div>-->
-<!--                                <input id="question-1-correctA" type="number" class="form-control" />-->
-<!--                            </div>-->
-<!--                            <hr>-->
-<!--                            <button id="updateQuestion-1-Btn" type="submit" class="btn btn-primary updateQ_btn" disabled>Update</button>-->
-<!--                            <button id="deleteQuestion-1-Btn" data_id="delete" type="button" class="btn btn-danger deleteQ_btn" disabled>Delete</button>-->
-<!--                        </form>-->
-<!--                     </div>-->
-<!--                  </div>-->
-
-<!--                </div>-->
-
-
-            </div>
-
         </div>
-
+    </div>
 </div>
 
 

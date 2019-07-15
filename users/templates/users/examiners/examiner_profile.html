@@ -19,14 +19,14 @@
 
 {% block content %}
 
-    <div class="container" style="padding: 10px">
+    <div class="container">
 
-        <h1 class="display-4" style="margin: 30px 0; font-size: 45px">Welcome <b>"{{ profile.user }}"</b>, in examiner dashboard</h1>
+        <h1 class="display-4">Welcome <b>"{{ profile.user }}"</b>, in examiner dashboard</h1>
 
-        <div class="jumbotron" style="padding: 15px; background-color: #ccc;">
+        <div class="jumbotron">
             <div class="card card-body" >
 
-                <div class="list-group" style="width: 300px">
+                <div class="list-group">
                   <a href="{% url 'main:all_exams' %}" class="list-group-item list-group-item-action list-group-item-primary item">My Exams</a>
                   <a href="#" class="list-group-item list-group-item-action list-group-item-primary item">Student Scores</a>
                 </div>

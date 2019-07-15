@@ -21,17 +21,17 @@
 
 {% block content %}
 
-    <div class="container" style="padding: 10px">
+    <div class="container">
 
-        <h1 class="display-4" style="margin: 30px 0; font-size: 45px">Welcome <b>{{ profile.user.username }}</b>,</h1>
+        <h1 class="display-4">Welcome <b>{{ profile.user.username }}</b>,</h1>
 
-        <div class="jumbotron" style="padding: 15px; background-color: #ccc;">
+        <div class="jumbotron">
             <div class="card card-body">
 
                 <!-- Button trigger modal -->
                 <div class="top">
 
-                    <h3>Select an Exam and GO !</h3>
+                    <h3 class="top_statement">Select an Exam and GO !</h3>
 
                     <button type="button" class="btn btn-primary startExamBtn" data-toggle="modal" data-target="#exampleModalCenter">
                       Select Exam
