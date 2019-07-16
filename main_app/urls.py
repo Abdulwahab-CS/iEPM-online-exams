@@ -20,6 +20,5 @@ urlpatterns = [
     path('delete_exam/<int:exam_id>/', users_views.delete_exam, name='delete_exam'),
 
 
-    path('submit_exam/<int:exam_id>/<int:std_id>/', users_views.submit_exam, name='submit_exam'),
-    path('submit_exam2/', users_views.submit_exam2, name='submit_exam2')
+    path('submit_exam/', users_views.submit_exam, name='submit_exam')
 ]

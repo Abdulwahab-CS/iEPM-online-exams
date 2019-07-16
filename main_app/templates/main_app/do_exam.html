@@ -37,8 +37,8 @@
                     <div class="info">Total Number of Questions : <span id="questionsNum">{{ questions_count }}</span></div>
                 </div>
 
-                <form method="post">{% csrf_token %}
-                                    <!-- {% url 'main:submit_exam' exam_id std_id %} -->
+                <form id="submitExamForm" method="post" action="">{% csrf_token %}
+
                   <div id="questoins_place">
 
                     {% for question in questions %}
@@ -88,7 +88,7 @@
 
                   </div> <!-- end questions list -->
 
-                  <input id="submitButton" type="button" onclick="submit_exam()" class="btn btn-primary submitBtn" value="Submit">
+                  <input id="submitButton" type="submit" class="btn btn-primary submitBtn" value="Submit">
                   <input type="button" onclick="exit_exam()" class="btn btn-outline-danger exitExamBtn" value="Exit Exam">
 
                 </form> <!-- end form -->

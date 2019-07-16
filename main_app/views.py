@@ -3,7 +3,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 from .forms import AddExamForm, EditExamForm
-from .models import Exam, Question
+from .models import Exam, Question, TakenExam
+from users.models import MyUser
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 
@@ -247,16 +248,31 @@ def delete_exam(request, exam_id):
     return redirect('main:all_exams')
 
 
-# Not completed:
-
-
-def submit_exam(request, exam_id, std_id):
-    return HttpResponse("<h2>YESSS !!</h2>")
-
-
-def submit_exam2(request):
+def submit_exam(request):
     if request.method == 'POST':
 
-        return HttpResponse("<h2>OHH YESSSSS , with POST  !!</h2>")
+        exam_id = request.POST.get('examID')
+        std_id = request.POST.get('stdID')
+        answers = request.POST.get('answers')
+        # !!!!! really strange : if I write : -> request.POST['answers'] : produces Internal Server Error (500)
 
-    return HttpResponse("<h2>OHH YESSSSS !!</h2>")
+        # get the exam questions to calc scores
+        all_questions = Question.objects.filter(exam=exam_id)
+
+        # to make the answers iterable, because now it's one string, so we want to remove the commas
+        answers = answers.split(',')
+
+        # calc student score in the exam
+        score = 0
+        for i in range(len(answers)):
+            if int(answers[i]) == int(all_questions[i].correct_ans):
+                score += 1
+
+        # get the exam and the student and add the score in the database
+        exam = Exam.objects.get(id=exam_id)
+        student = request.user.myuser
+
+        TakenExam.objects.get_or_create(student=student, exam=exam, score=score, full_mark=len(all_questions))
+        return HttpResponse(1)
+    else:
+        return HttpResponse(0)

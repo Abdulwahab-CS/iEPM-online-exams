@@ -42,6 +42,5 @@ class TakenExam(models.Model):
     student = models.ForeignKey(MyUser, on_delete=models.CASCADE)
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE)
     score = models.IntegerField()
+    full_mark = models.IntegerField()
     done_date = models.DateTimeField(default=timezone.datetime.now())
-
-
