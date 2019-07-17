@@ -1,0 +1,73 @@
+
+.display-4 {
+    text-align: center;
+    font-weight: 400;
+    margin: 20px 0;
+    font-size: 38px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px gray;
+}
+
+table tr {
+    border-radius: 5px;
+}
+
+.container {
+    margin-top: 3.5%;
+}
+
+th, td {
+    text-align: center;
+    border: 2px solid gray;
+
+}
+
+.table thead th {
+    border: 2px solid gray;
+    vertical-align: middle;
+}
+
+table {
+    color: black;
+}
+
+thead {
+    background-color: rgb(189, 189, 189);
+    font-weight: 600;
+}
+
+tbody {
+    background-color: white;
+    font-weight: 600;
+}
+
+.sub_th {
+    background-color: rgb(189, 224, 191);
+    font-weight: 600;
+}
+
+.backBtn {
+    width: 80px;
+    float: left;
+    margin-right: 5px;
+}
+
+.empryScores {
+    text-align: center;
+    border: 1px solid gray;
+    background-color: lightgray;
+    margin: 30px 0;
+    color: black;
+}
+
+@media (max-width: 573px) {
+    body  {
+        min-height: 1250px;
+        min-width: 600px;
+    }
+}

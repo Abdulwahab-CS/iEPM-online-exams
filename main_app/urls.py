@@ -18,7 +18,8 @@ urlpatterns = [
     path('update_question/<int:exam_id>/<int:question_id>/', users_views.update_question, name='update_question'),
     path('delete_question/<int:exam_id>/<int:question_id>/', users_views.delete_question, name='delete_question'),
     path('delete_exam/<int:exam_id>/', users_views.delete_exam, name='delete_exam'),
+    path('submit_exam/', users_views.submit_exam, name='submit_exam'),
+    path('students_scores/', users_views.students_scores, name="students_scores"),
 
-
-    path('submit_exam/', users_views.submit_exam, name='submit_exam')
+    path('clear_scores/', users_views.clear_scores, name="clear_scores")
 ]

@@ -16,6 +16,3 @@ class MyUser(models.Model):
 
     def __str__(self):
         return self.user.username
-
-    def create(self):
-        pass

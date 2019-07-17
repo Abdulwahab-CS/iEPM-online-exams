@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+
+{% block title %}
+    <title>Students Scores</title>
+{% endblock %}
+
+
+{% block custom_css %}
+    <link rel="stylesheet" href="{% static 'main_app/css/students_scores.css' %}">
+{% endblock %}
+
+
+{% block logout_in_navbar %}
+    <li class="nav-item mr-auto">
+        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
+    </li>
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+
+                <div class="display-4">All Students Scores</div>
+
+                <table class="table table-hover scoresTable">
+                    {% if results %}
+                        <thead>
+                            <tr>
+                                <th rowspan="2">#</th>
+                                <th rowspan="2">Student Name</th>
+                                <th colspan="2">Exam</th>
+                                <th colspan="2">Score</th>
+                            </tr>
+                            <tr>
+                                <th class="sub_th">Exam Name</th>
+                                <th class="sub_th">Category</th>
+                                <th class="sub_th">Score</th>
+                                <th class="sub_th">Full Mark</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="table_body">
+    <!--                         <tr>-->
+    <!--                            <th>1</th>-->
+    <!--                            <td>Abdulwahab Ahmad Alhendi</td>-->
+    <!--                            <td>Compilers</td>-->
+    <!--                            <td>cs123</td>-->
+    <!--                            <td>6</td>-->
+    <!--                            <td>10</td>-->
+    <!--                        </tr>-->
+`
+
+                        {% for result in results %}
+                            <tr>
+                                <th>{{ forloop.counter }}</th>
+                                <td>{{ result.student }}</td>
+                                <td>{{ result.exam.exam_name }}</td>
+                                <td>{{ result.exam.category }}</td>
+                                <td>{{ result.score }}</td>
+                                <td>{{ result.full_mark }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+
+                    <button id="clearBtn" class="btn btn-outline-success">Clear</button>
+
+                {% else %}
+
+                    <div class="card card-body empryScores">
+                        <h4>No scores recorded</h4>
+                    </div>
+
+                {% endif %}
+
+                    <span><a href="{% url 'users:home' %}"  class="btn btn-secondary backBtn">Back</a></span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block custom_js %}
+    <script src="{% static 'main_app/js/students_scores.js' %}"></script>
+{% endblock %}

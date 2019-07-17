@@ -276,3 +276,42 @@ def submit_exam(request):
         return HttpResponse(1)
     else:
         return HttpResponse(0)
+
+
+def students_scores(request):
+
+    temp = TakenExam.objects.all()
+    results = []
+    for t in temp:
+        if t.exam.examiner == request.user.myuser:
+            results.append(t)
+
+    data = {
+        'results': results
+    }
+    return render(request, 'main_app/students_scores.html', data)
+
+
+def clear_scores(request):
+
+    # get all the exams that created by the examiner
+    exams_to_delete = Exam.objects.filter(examiner=request.user.myuser)
+
+    # delete all scores that related to those exams (clear)
+    for x in exams_to_delete:
+        x.takenexam_set.all().delete()
+
+    '''
+        # The NONE efficient way to do (clear operation)
+        
+        # targeted_exams = Exam.objects.filter(examiner=request.user.myuser)
+        # temp = TakenExam.objects.filter(exam=targeted_exams).delete()
+        #
+        # for t in temp:
+        #     if t.exam.examiner == request.user.myuser:
+        #         t.delete()
+    '''
+
+    messages.success(request, "All scores cleared successfully")
+    return redirect("users:home")
+

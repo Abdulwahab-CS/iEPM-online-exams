@@ -44,3 +44,6 @@ class TakenExam(models.Model):
     score = models.IntegerField()
     full_mark = models.IntegerField()
     done_date = models.DateTimeField(default=timezone.datetime.now())
+
+    def __str__(self):
+        return self.student.user.username + '\'s score in ' + self.exam.exam_name + ' exam'
