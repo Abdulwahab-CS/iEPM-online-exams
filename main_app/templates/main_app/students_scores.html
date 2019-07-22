@@ -15,9 +15,9 @@
 
 
 {% block logout_in_navbar %}
-    <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
-    </li>
+
+    {% include 'sign_out_button.html' %}
+
 {% endblock %}
 
 
@@ -28,48 +28,48 @@
             <div class="col">
 
                 <div class="display-4">All Students Scores</div>
+                <div class="table-responsive">
+                    <table class="table table-hover scoresTable">
+                        {% if results %}
+                            <thead>
+                                <tr>
+                                    <th rowspan="2">#</th>
+                                    <th rowspan="2">Student Name</th>
+                                    <th colspan="2">Exam</th>
+                                    <th colspan="2">Score</th>
+                                </tr>
+                                <tr>
+                                    <th class="sub_th">Exam Name</th>
+                                    <th class="sub_th">Category</th>
+                                    <th class="sub_th">Score</th>
+                                    <th class="sub_th">Full Mark</th>
+                                </tr>
+                            </thead>
 
-                <table class="table table-hover scoresTable">
-                    {% if results %}
-                        <thead>
-                            <tr>
-                                <th rowspan="2">#</th>
-                                <th rowspan="2">Student Name</th>
-                                <th colspan="2">Exam</th>
-                                <th colspan="2">Score</th>
-                            </tr>
-                            <tr>
-                                <th class="sub_th">Exam Name</th>
-                                <th class="sub_th">Category</th>
-                                <th class="sub_th">Score</th>
-                                <th class="sub_th">Full Mark</th>
-                            </tr>
-                        </thead>
+                            <tbody id="table_body">
+        <!--                         <tr>-->
+        <!--                            <th>1</th>-->
+        <!--                            <td>Abdulwahab Ahmad Alhendi</td>-->
+        <!--                            <td>Compilers</td>-->
+        <!--                            <td>cs123</td>-->
+        <!--                            <td>6</td>-->
+        <!--                            <td>10</td>-->
+        <!--                        </tr>-->
+    `
 
-                        <tbody id="table_body">
-    <!--                         <tr>-->
-    <!--                            <th>1</th>-->
-    <!--                            <td>Abdulwahab Ahmad Alhendi</td>-->
-    <!--                            <td>Compilers</td>-->
-    <!--                            <td>cs123</td>-->
-    <!--                            <td>6</td>-->
-    <!--                            <td>10</td>-->
-    <!--                        </tr>-->
-`
-
-                        {% for result in results %}
-                            <tr>
-                                <th>{{ forloop.counter }}</th>
-                                <td>{{ result.student }}</td>
-                                <td>{{ result.exam.exam_name }}</td>
-                                <td>{{ result.exam.category }}</td>
-                                <td>{{ result.score }}</td>
-                                <td>{{ result.full_mark }}</td>
-                            </tr>
-                        {% endfor %}
-                        </tbody>
-                    </table>
-
+                            {% for result in results %}
+                                <tr>
+                                    <th>{{ forloop.counter }}</th>
+                                    <td>{{ result.student }}</td>
+                                    <td>{{ result.exam.exam_name }}</td>
+                                    <td>{{ result.exam.category }}</td>
+                                    <td>{{ result.score }}</td>
+                                    <td>{{ result.full_mark }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
 
                     <button id="clearBtn" class="btn btn-outline-success">Clear</button>
 

@@ -15,9 +15,9 @@
 
 
 {% block logout_in_navbar %}
-    <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
-    </li>
+
+    {% include 'sign_out_button.html' %}
+
 {% endblock %}
 
 

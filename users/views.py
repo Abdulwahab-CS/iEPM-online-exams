@@ -27,7 +27,7 @@ def examiner_sign_up(request):
             user = form.save()
             MyUser.objects.get_or_create(user=user, is_examiner=True)
 
-            messages.success(request, f"Your account created successfully, Plz login :)")
+            messages.success(request, f"Your account created successfully")
             return redirect('users:login')
 
     else:
@@ -47,7 +47,7 @@ def student_sign_up(request):
             user = form.save()
             MyUser.objects.get_or_create(user=user, is_student=True)
 
-            messages.success(request, f"Your account created successfully, Plz login :)")
+            messages.success(request, f"Your account created successfully")
             return redirect('users:login')
 
     else:
@@ -120,7 +120,7 @@ def student_profile(request, slug):
 
     profile = get_object_or_404(MyUser, slug=slug)
 
-    exams = Exam.objects.all()
+    exams = Exam.objects.filter(is_published=True)
 
     data = {
         'profile': profile,

@@ -13,9 +13,9 @@
 {% endblock %}
 
 {% block logout_in_navbar %}
-    <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
-    </li>
+
+    {% include 'sign_out_button.html' %}
+
 {% endblock %}
 
 
@@ -25,65 +25,78 @@
         <div class="row">
             <div class="col">
 
-                <div class="display-4" style="margin:10px; text-align:center;">All Exams</div>
+                <div class="display-4">All Exams</div>
 
-                <table class="table" style="text-align: center">
-                    {% if exams %}
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Exam Name</th>
-                            <th>Category</th>
-                            <th>Questions Number</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
+                <div class="table-responsive">
+                    <table class="table">
+                        {% if exams %}
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Exam Name</th>
+                                <th>Category</th>
+                                <th>Questions</th>
+                                <th>Actions</th>
+                                <th>Published</th>
+                            </tr>
+                        </thead>
 
-                    <tbody id="table_body">
+                        <tbody id="table_body">
 
-                        {% for exam in exams %}
-                        <tr>
-                            <td class="examsCounter">{{ forloop.counter }}</td>
-                            <td>{{ exam.exam_name }}</td>
-                            <td>{{ exam.category }}</td>
-                            <td>{{ exam.num_of_questions }}</td>
-                            <td>
+                            {% for exam in exams %}
+                            <tr>
+                                <td class="examsCounter">{{ forloop.counter }}</td>
+                                <td>{{ exam.exam_name }}</td>
+                                <td>{{ exam.category }}</td>
+                                <td>{{ exam.num_of_questions }}</td>
+                                <td>
 
-                                <form style="display: inline" method="post" action="{% url 'main:show_exam' exam.id %}">{% csrf_token %}
-                                    <input type="submit" class="btn btn-outline-primary" value="Show">
-                                </form>
+                                    <form style="display: inline" method="post" action="{% url 'main:show_exam' exam.id %}">{% csrf_token %}
+<!--                                        <input type="submit" class="btn btn-outline-primary" value="Show">-->
+                                        <button type="submit" class="btn btn-outline-primary">Show <i class="fa fa-eye"></i></button>
+                                    </form>
 
-                                <form style="display: inline" method="post" action="{% url 'main:edit_exam' exam.id %}">{% csrf_token %}
-                                    <input type="submit" class="btn btn-outline-secondary"  value="Edit">
-                                </form>
+                                    <form style="display: inline" method="post" action="{% url 'main:edit_exam' exam.id %}">{% csrf_token %}
+<!--                                        <input type="submit" class="btn btn-outline-secondary"  value="Edit">-->
+                                        <button type="submit" class="btn btn-outline-secondary">Edit <i class="far fa-edit"></i></button>
+                                    </form>
 
-                                <form style="display: inline" method="post" action="{% url 'main:manage_questions' exam.id %}">{% csrf_token %}
-                                    <input type="submit" class="btn btn-outline-success"  value="Manage Questions">
-                                </form>
+                                    <form style="display: inline" method="post" action="{% url 'main:manage_questions' exam.id %}">{% csrf_token %}
+<!--                                        <input type="submit" class="btn btn-outline-success"  value="Manage Questions">-->
+                                        <button type="submit" class="btn btn-outline-success">Questions <i class="fa fa-cog"></i></button>
+                                    </form>
 
-                                <form style="display: inline" method="post" action="{% url 'main:delete_exam' exam.id %}">{% csrf_token %}
-                                    <input type="button" onclick="delete_exam({{exam.id}}, '{{exam.exam_name}}')" class="btn btn-outline-danger" value="Delete">
-                                </form>
-
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    {% else %}
-
-                            <h4 class="noExams">No exams found</h4>
-
-                    {% endif %}
+<!--                                    <input type="button" onclick="delete_exam({{exam.id}}, '{{exam.exam_name}}')" class="btn btn-outline-danger" value="Delete">-->
+                                    <button type="button" onclick="delete_exam({{exam.id}}, '{{exam.exam_name}}')" class="btn btn-outline-danger">Delete <i class="far fa-trash-alt"></i></button>
 
 
-                    </tbody>
-                </table>
+                                </td>
+                                <td>
+
+                                    <input id="publish_exam_{{exam.id}}" type="checkbox" onclick="publish_exam({{exam.id}}, '{{exam.exam_name}}', '{{ exam.num_of_questions }}')"
+                                           {% if exam.is_published %} checked {% endif %}>
+
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        {% else %}
+
+                                <h4 class="noExams">No exams found</h4>
+
+                        {% endif %}
+
+
+                        </tbody>
+                    </table>
+                </div>
 
                 <hr>
-                <a class="btn btn-primary" href="{% url 'main:add_exam' %}">Add Exam</a>
                 <a href="{% url 'users:examiner_profile' current_user.slug %}"  class="btn btn-secondary myBtn">Back</a>
+                <a class="btn btn-success" href="{% url 'main:add_exam' %}">Add Exam <i class="fa fa-plus"></i></a>
             </div>
         </div>
     </div>
+
 
 
 {% endblock %}

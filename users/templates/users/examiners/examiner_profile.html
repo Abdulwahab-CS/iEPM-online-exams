@@ -12,9 +12,9 @@
 
 
 {% block logout_in_navbar %}
-    <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
-    </li>
+
+    {% include 'sign_out_button.html' %}
+
 {% endblock %}
 
 {% block content %}
@@ -26,8 +26,9 @@
         <div class="jumbotron">
             <div class="card card-body" >
 
-                <div class="list-group">
-                  <a href="{% url 'main:all_exams' %}" class="list-group-item list-group-item-action list-group-item-primary item">My Exams</a>
+                <div class="list-group my_list">
+                  <a href="{% url 'main:add_exam' %}" class="list-group-item list-group-item-action list-group-item-primary item">Add Exam</a>
+                  <a href="{% url 'main:all_exams' %}" class="list-group-item list-group-item-action list-group-item-primary item">Manage Exams</a>
                   <a href="{% url 'main:students_scores' %}" class="list-group-item list-group-item-action list-group-item-primary item">Student Scores</a>
                 </div>
 

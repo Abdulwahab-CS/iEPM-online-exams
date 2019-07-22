@@ -10,10 +10,9 @@
 <style>
 
   .display-4 {
-    text-align: center;
-    font-weight: 400;
-    margin: 20px 0;
-    font-size: 38px;
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 40px;
   }
 
   .lead{
@@ -40,8 +39,8 @@
                     {{ form|crispy }}
 
                     <div style="text-align: right">
-                        <input type="submit" style="float: left" class="btn btn-success" value="Sign up">
-                        <a href="{% url 'main:home' %}" style="float: left; margin-left: 5px;" class="btn btn-secondary">Back</a>
+                        <a href="{% url 'main:home' %}" style="float: left; margin-right: 5px;" class="btn btn-secondary">Back</a>
+                        <button type="submit" style="float: left" class="btn btn-success">Sign up <i class="fa fa-user-plus"></i></button>
                         <span>Already Have An Account ?</span>
                         <a class="btn btn-outline-primary" href="{% url 'users:login' %}">Login</a>
 

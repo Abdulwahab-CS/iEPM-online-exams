@@ -12,7 +12,13 @@
     padding: 10px;
   }
 
-  .display-4, .lead{
+  .display-4 {
+    font-weight: 500;
+    margin: 10px 0;
+    font-size: 43px;
+  }
+
+  .lead{
     font-weight: 400;
   }
 
@@ -32,8 +38,10 @@
             <div class="card card-body">
                 <form method="POST" action="{% url 'users:login' %}">{% csrf_token %}
                     {{ form|crispy }}
-                    <input type="submit" class="btn btn-primary" value="Login">
+
+
                     <a href="{% url 'main:home' %}" class="btn btn-secondary">Back</a>
+                    <button type="submit" class="btn btn-primary">Login <i class="fa fa-sign-in"></i></button>
                 </form>
             </div>
 

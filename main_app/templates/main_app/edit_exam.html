@@ -15,9 +15,9 @@
 
 
 {% block logout_in_navbar %}
-    <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
-    </li>
+
+    {% include 'sign_out_button.html' %}
+
 {% endblock %}
 
 
@@ -27,7 +27,7 @@
     <div class="row">
         <div class="col">
 
-            <h2 class="display-4" style="padding-top: 20px">Edit Exam</h2>
+            <h2 class="display-4">Edit Exam</h2>
 
             <div class="my_container">
 
@@ -37,7 +37,7 @@
                     {{ form.category|as_crispy_field }}
 
                     <span><a href="{% url 'main:all_exams' %}" id="backbtn" class="btn btn-secondary backBtn">Back</a></span>
-                    <input type="submit" class="btn btn-success" value="Save">
+                    <button type="submit" class="btn btn-success">Save <i class="far fa-save"></i></button>
 
                 </form>
 

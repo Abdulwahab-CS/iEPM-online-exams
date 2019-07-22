@@ -4,7 +4,7 @@
 
 
 {% block title %}
-    <title>Show Exam</title>
+    <title>Exam</title>
 {% endblock %}
 
 
@@ -14,9 +14,9 @@
 
 
 {% block logout_in_navbar %}
-    <li class="nav-item mr-auto">
-        <a class="nav-link" href="{% url 'users:logout' %}">Logout</a>
-    </li>
+
+    {% include 'sign_out_button.html' %}
+
 {% endblock %}
 
 
@@ -88,8 +88,8 @@
 
                   </div> <!-- end questions list -->
 
-                  <input id="submitButton" type="submit" class="btn btn-primary submitBtn" value="Submit">
-                  <input type="button" onclick="exit_exam()" class="btn btn-outline-danger exitExamBtn" value="Exit Exam">
+                  <button id="submitButton" type="submit" class="btn btn-primary submitBtn">Submit&ensp;<i class="fa fa-check-circle"></i></button>
+                  <button type="button" onclick="exit_exam()" class="btn btn-danger exitExamBtn">Exit Exam <i class="fa fa-external-link-alt"></i></button>
 
                 </form> <!-- end form -->
 

@@ -18,10 +18,14 @@
 }
 
 .list-group {
-    width: 300px
+    width: 250px;
 }
 
 .item {
     margin: 10px;
 }
 
+
+.my_list {
+    text-align: center;
+}

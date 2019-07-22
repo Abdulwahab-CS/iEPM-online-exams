@@ -21,10 +21,21 @@ def add_exam(request):
         if form.is_valid():
             exam_name = form.cleaned_data.get('exam_name')
             category = form.cleaned_data.get('category')
-            # create new exam
-            Exam.objects.get_or_create(examiner=request.user.myuser, exam_name=exam_name, category=category)
-            messages.success(request, f"( {exam_name} exam ) added successfully")
-            return redirect('main:all_exams')
+
+            # check if found exam with same name and category
+            temp = Exam.objects.filter(
+                exam_name__iexact=exam_name,
+                category__iexact=category
+            )
+
+            if temp:
+                messages.error(request, "Found exam with same name and category")
+                return redirect('main:add_exam')
+
+            else:
+                Exam.objects.get_or_create(examiner=request.user.myuser, exam_name=exam_name, category=category)
+                messages.success(request, f"( {exam_name} exam ) added successfully")
+                return redirect('main:all_exams')
 
     else:
         form = AddExamForm()
@@ -61,24 +72,6 @@ def delete_exam(request, exam_id):
     return redirect('main:all_exams')
 
 
-def manage_exam(request, exam_id):
-
-    exam = Exam.objects.get(id=exam_id)
-    exam_name = exam.exam_name
-    exam_category = exam.category
-
-    questions = Question.objects.filter(exam=exam)
-
-    data = {
-        'exam_id': exam_id,
-        'exam_name': exam_name,
-        'exam_category': exam_category,
-        'questions': questions
-    }
-
-    return render(request, 'main_app/manage_questions.html', data)
-
-
 def add_question(request, exam_id):
     if request.method == 'POST':
 
@@ -89,7 +82,7 @@ def add_question(request, exam_id):
         op2 = request.POST.get('newQ_option2')
         op3 = request.POST.get('newQ_option3')
         op4 = request.POST.get('newQ_option4')
-        correct_ans = request.POST.get('newQ_correct_ans')
+        correct_ans = request.POST.get('newQ_correctA')
 
         Question.objects.get_or_create(exam=exam,
                                        body=q_body,
@@ -98,9 +91,11 @@ def add_question(request, exam_id):
                                        op3=op3,
                                        op4=op4,
                                        correct_ans=correct_ans)
-
         messages.success(request, "Question added successfully")
-        return redirect("../")
+        return HttpResponse(1)
+
+    else:
+        return HttpResponse(0)
 
 
 def edit_exam(request, exam_id):
@@ -128,15 +123,12 @@ def do_edit_exam(request, exam_id):
         name = request.POST.get('exam_name')
         category = request.POST.get('category')
 
-        list = Exam.objects.filter(examiner=request.user.myuser).exclude(id=exam_id)
-        found_exam_with_same_name = False
+        # check if found exam with same name and category
+        exams = Exam.objects.filter(examiner=request.user.myuser).exclude(id=exam_id)
+        temp = exams.filter(exam_name__iexact=name, category__iexact=category)
 
-        for item in list:
-            if item.exam_name == name:
-                found_exam_with_same_name = True
-
-        if found_exam_with_same_name:
-            messages.error(request, "The new exam name contradicts other exam name")
+        if temp:
+            messages.error(request, "Found exam with same name and category")
             return redirect("main:edit_exam", exam_id)
 
         else:
@@ -191,19 +183,27 @@ def do_exam(request, exam_id):
         exam_name = exam.exam_name
         exam_category = exam.category
 
-        questions = Question.objects.filter(exam=exam)
-        questions_count = len(questions)
+        # check if the student take this exam before or not
+        temp = TakenExam.objects.filter(exam=exam, student=request.user.myuser)
 
-    data = {
-        'exam_id': exam_id,
-        'std_id': request.user.id,
-        'exam_name': exam_name,
-        'exam_category': exam_category,
-        'questions': questions,
-        'questions_count': questions_count
-    }
+        if temp:
+            messages.error(request, f"You have done this exam before !")
+            return redirect("users:home")
 
-    return render(request, 'main_app/do_exam.html', data)
+        else:
+            questions = Question.objects.filter(exam=exam)
+            questions_count = len(questions)
+
+        data = {
+            'exam_id': exam_id,
+            'std_id': request.user.id,
+            'exam_name': exam_name,
+            'exam_category': exam_category,
+            'questions': questions,
+            'questions_count': questions_count
+        }
+
+        return render(request, 'main_app/do_exam.html', data)
 
 
 def update_question(request, exam_id, question_id):
@@ -211,12 +211,12 @@ def update_question(request, exam_id, question_id):
 
         question = Question.objects.get(id=question_id)
 
-        q_body = request.POST.get(f'question-{question.id}-body')
-        op1 = request.POST.get(f'question-{question.id}-option-1')
-        op2 = request.POST.get(f'question-{question.id}-option-2')
-        op3 = request.POST.get(f'question-{question.id}-option-3')
-        op4 = request.POST.get(f'question-{question.id}-option-4')
-        correct_ans = request.POST.get(f'question-{question.id}-correctA')
+        q_body = request.POST.get('qBody')
+        op1 = request.POST.get('op1')
+        op2 = request.POST.get('op2')
+        op3 = request.POST.get('op3')
+        op4 = request.POST.get('op4')
+        correct_ans = request.POST.get('correctA')
 
         question.body = q_body
         question.op1 = op1
@@ -227,7 +227,12 @@ def update_question(request, exam_id, question_id):
 
         question.save()
         messages.success(request, "Question updated successfully")
-        return redirect('main:manage_questions', exam_id)
+
+        return HttpResponse(1)
+        # return redirect('main:manage_questions', exam_id)
+
+    else:
+        return HttpResponse(0)
 
 
 def delete_question(request, exam_id, question_id):
@@ -294,10 +299,10 @@ def students_scores(request):
 
 def clear_scores(request):
 
-    # get all the exams that created by the examiner
+    # get all the exams that created by this examiner
     exams_to_delete = Exam.objects.filter(examiner=request.user.myuser)
 
-    # delete all scores that related to those exams (clear)
+    # delete all scores that related to those exams (clear operation)
     for x in exams_to_delete:
         x.takenexam_set.all().delete()
 
@@ -314,4 +319,24 @@ def clear_scores(request):
 
     messages.success(request, "All scores cleared successfully")
     return redirect("users:home")
+
+
+def publish_exam(request, exam_id):
+
+    exam = get_object_or_404(Exam, id=exam_id)
+    exam.is_published = True
+    exam.save()
+
+    messages.success(request, 'Exam published successfully')
+    return redirect('main:all_exams')
+
+
+def un_publish_exam(request, exam_id):
+
+    exam = get_object_or_404(Exam, id=exam_id)
+    exam.is_published = False
+    exam.save()
+
+    messages.success(request, 'Exam Un-published successfully')
+    return redirect('main:all_exams')
 
