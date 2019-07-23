@@ -26,7 +26,9 @@ SECRET_KEY = 'v2g=^4u=p+e3z-=-oezl(cj!x9yc#e5#f&^kofzk74n1z2l3!q'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'arcane-mountain-25478.herokuapp.com'
+    'arcane-mountain-25478.herokuapp.com',
+    'iepm-exams-system.herokuapp.com',
+    '127.0.0.1'
 ]
 
 
