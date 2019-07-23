@@ -1,5 +1,3 @@
-
-
 """
 Django settings for iEPM_Online_Exams project.
 
@@ -12,8 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
-
-import django_heroku
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -136,6 +132,3 @@ AUTH_PROFILE_MODULE = 'users.MyUser'
 
 LOGIN_REDIRECT_URL = 'users:home'
 LOGOUT_REDIRECT_URL = 'main:home'
-
-
-django_heroku.settings(locals())
