@@ -1,0 +1,57 @@
+.info {
+background-color: white;
+margin: 10px;
+padding: 8px;
+font-size: 19px;
+}
+
+.info span {
+    font-weight: bold;
+}
+
+.card-header {
+    margin: 30px auto;
+    color: black;
+}
+#allQuestinos_area {
+    margin: 20px auto;
+    padding: 0 25px 25px 25px;
+}
+
+.question {
+    margin: 0px auto;
+    padding: 10px;
+    border: 5px solid #05668D;
+    width: 90%;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 25px;
+    color: black;
+    box-shadow: 3px 3px 10px gray;
+}
+
+.question_body {
+    font-size: 22px;
+    padding: 5px;
+}
+
+.option {
+    padding: 2px;
+    margin: 2px;
+    background: white;
+    background-color: white;
+    color: black;
+}
+
+.submitBtn {
+    float: right;
+    width: 150px;
+    margin-bottom: 50px;
+}
+.exitExamBtn {
+    width: 150px;
+}
+
+.btn-secondary {
+    margin-bottom: 30px;
+}

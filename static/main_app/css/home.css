@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+.my_jumbotron {
+    background-color: #bbd8f8;
+    border: 3px solid black;
+    box-shadow: 6px 6px gray;
+}
+
+.display-4 {
+    font-weight: 500;
+    font-family: 'Courgette', cursive;
+}
+
+.lead {
+    font-weight: bold;
+}
+
+.icon-emo-happy{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "c64623255a4a7c72436b199b05296c4f",
+      "css": "emo-happy",
+      "code": 59392,
+      "src": "fontelico"
+    }
+  ]
+}

@@ -2,35 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b6d63f-d338-46d1-a324-2c2f74d37b6c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/sign_out_button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/changelists.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/fonts.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/forms.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/responsive_rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/LICENSE-SELECT2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/vendor/select2/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/css/widgets.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/fonts/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/fonts/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Bold-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Light-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/fonts/Roboto-Regular-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/calendar-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_off.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/gis/move_vertex_on.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-addlink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-alert.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-changelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-clock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-deletelink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-no.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown-alt.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-unknown.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-viewlink.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/icon-yes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/inline-delete.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/selector-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/sorting-icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/tooltag-add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/img/tooltag-arrowright.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/SelectBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/SelectFilter2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/actions.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/autocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/cancel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/change_form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/collapse.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/inlines.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/inlines.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/jquery.init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/popup_response.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/prepopulate_init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/timeparse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/urlify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/LICENSE.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/i18n/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/select2/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/add_exam.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/all_exams.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/do_exam.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/edit_exam.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/manage_questions.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/show_exam.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/css/students_scores.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/imgs/b14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/imgs/iEPM_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/js/all_exams.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/js/do_exam.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/js/manage_questions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/main_app/js/students_scores.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/users/examiners/css/examiner_profile.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/users/students/css/student_profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/add_exam.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/add_exam.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/all_exams.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/all_exams.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/edit_exam.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/manage_questions.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/manage_questions.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/css/students_scores.css" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/css/students_scores.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/js/all_exams.js" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/js/all_exams.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/static/main_app/js/manage_questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/static/main_app/js/manage_questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/all_exams.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/all_exams.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/students_scores.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/students_scores.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/examiners/examiner_sign_up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/students/student_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/students/student_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/templates/users/students/student_sign_up.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/students/student_sign_up.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iEPM_Online_Exams/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/iEPM_Online_Exams/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,87 +148,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_app/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding>
-                <element signature="e#390#434#0" />
-                <element signature="e#1403#1431#0" />
-                <element signature="e#1522#1878#0" />
-                <element signature="e#1611#1688#0" />
-                <element signature="e#1701#1818#0" />
-                <element signature="e#1920#2206#0" />
-                <element signature="e#1981#2085#0" />
-                <element signature="e#2249#3111#0" />
-                <element signature="e#2287#3069#0" />
-                <element signature="e#3152#3438#0" />
-                <element signature="e#3320#3377#0" />
-                <element signature="e#3482#4251#0" />
-                <element signature="e#3519#4251#0" />
-                <element signature="e#3903#4023#0" />
-                <element signature="e#4051#4251#0" />
-                <element signature="e#4299#4669#0" />
-                <element signature="e#4464#4602#0" />
-                <element signature="e#4709#5154#0" />
-                <element signature="e#4911#5093#0" />
-                <element signature="e#5193#6056#0" />
-                <element signature="e#5230#6056#0" />
-                <element signature="e#5510#5612#0" />
-                <element signature="e#5640#5731#0" />
-                <element signature="e#5748#5993#0" />
-                <element signature="e#6115#6856#0" />
-                <element signature="e#6153#6814#0" />
-                <element signature="e#6916#7110#0" />
-                <element signature="e#7153#7311#0" />
-                <element signature="e#7344#8403#0" />
-                <element signature="e#7382#8362#0" />
-                <element signature="e#7516#7619#0" />
-                <element signature="e#7980#8063#0" />
-                <element signature="e#8441#8701#0" />
-                <element signature="e#8516#8588#0" />
-                <element signature="e#8601#8635#0" />
-                <element signature="e#8736#9450#0" />
-                <element signature="e#9003#9350#1" />
-                <element signature="e#9494#9681#0" />
-                <element signature="e#9728#9919#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/add_exam.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+        <entry file="file://$PROJECT_DIR$/iEPM_Online_Exams/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-121">
-              <caret line="34" column="97" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="79">
+              <caret line="48" column="10" lean-forward="true" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -129,8 +163,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -149,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/users/signals.py" />
         <option value="$PROJECT_DIR$/users/templates/users/examiner_login.html" />
         <option value="$PROJECT_DIR$/iEPM_Online_Exams/urls.py" />
         <option value="$PROJECT_DIR$/users/templates/users/examiner_sign_up.html" />
@@ -166,7 +199,6 @@
         <option value="$PROJECT_DIR$/main_app/static/main_app/css/do_exam.css" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/css/show_exam.css" />
         <option value="$PROJECT_DIR$/users/urls.py" />
-        <option value="$PROJECT_DIR$/iEPM_Online_Exams/settings.py" />
         <option value="$PROJECT_DIR$/main_app/forms.py" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/js/do_exam.js" />
         <option value="$PROJECT_DIR$/users/models.py" />
@@ -200,6 +232,8 @@
         <option value="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" />
         <option value="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/Procfile.py" />
+        <option value="$PROJECT_DIR$/iEPM_Online_Exams/settings.py" />
       </list>
     </option>
   </component>
@@ -214,13 +248,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
               <item name="iEPM_Online_Exams" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="C:\Users\Abdul\PycharmProjects\iEPM_Online_Exams" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="iEPM_Online_Exams" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iEPM_Online_Exams" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -276,8 +320,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17701453" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14993395" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -295,25 +340,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17701453" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32956153" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.64356434" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32956153" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
@@ -330,24 +356,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/users/signals.py" />
-    <entry file="file://$PROJECT_DIR$/iEPM_Online_Exams/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#641#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/urls/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/messages.html" />
     <entry file="file://$PROJECT_DIR$/static/js/sweetalert_messages.js" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/shortcuts.py">
@@ -407,13 +415,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iEPM_Online_Exams/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="131" column="33" lean-forward="true" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_app/forms.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -671,50 +672,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+        <state relative-caret-position="20">
+          <caret line="34" column="97" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
           <folding>
-            <element signature="e#390#434#0" />
-            <element signature="e#1403#1431#0" />
-            <element signature="e#1522#1878#0" />
-            <element signature="e#1611#1688#0" />
-            <element signature="e#1701#1818#0" />
-            <element signature="e#1920#2206#0" />
-            <element signature="e#1981#2085#0" />
-            <element signature="e#2249#3111#0" />
-            <element signature="e#2287#3069#0" />
-            <element signature="e#3152#3438#0" />
-            <element signature="e#3320#3377#0" />
-            <element signature="e#3482#4251#0" />
-            <element signature="e#3519#4251#0" />
-            <element signature="e#3903#4023#0" />
-            <element signature="e#4051#4251#0" />
-            <element signature="e#4299#4669#0" />
-            <element signature="e#4464#4602#0" />
-            <element signature="e#4709#5154#0" />
-            <element signature="e#4911#5093#0" />
-            <element signature="e#5193#6056#0" />
-            <element signature="e#5230#6056#0" />
-            <element signature="e#5510#5612#0" />
-            <element signature="e#5640#5731#0" />
-            <element signature="e#5748#5993#0" />
-            <element signature="e#6115#6856#0" />
-            <element signature="e#6153#6814#0" />
-            <element signature="e#6916#7110#0" />
-            <element signature="e#7153#7311#0" />
-            <element signature="e#7344#8403#0" />
-            <element signature="e#7382#8362#0" />
-            <element signature="e#7516#7619#0" />
-            <element signature="e#7980#8063#0" />
-            <element signature="e#8441#8701#0" />
-            <element signature="e#8516#8588#0" />
-            <element signature="e#8601#8635#0" />
-            <element signature="e#8736#9450#0" />
-            <element signature="e#9003#9350#1" />
-            <element signature="e#9494#9681#0" />
-            <element signature="e#9728#9919#0" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -722,9 +686,19 @@
     <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/add_exam.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
-          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
+          <caret line="28" column="47" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#390#434#0" />
           </folding>
         </state>
       </provider>
@@ -736,14 +710,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="34" column="97" selection-start-line="34" selection-start-column="97" selection-end-line="34" selection-end-column="97" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aa">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="26" lean-forward="true" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iEPM_Online_Exams/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="48" column="10" lean-forward="true" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
         </state>
       </provider>
     </entry>

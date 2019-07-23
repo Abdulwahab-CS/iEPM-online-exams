@@ -1,0 +1,86 @@
+
+.my_container {
+    margin-top: 2.5%;
+    font-size: 1.4em;
+    border-radius: 10px;
+    border: 1.5px solid gray;
+    padding: 30px;
+    box-shadow: 2px 2px 2px lightgray;
+    background-color: white;
+  }
+
+  .QL_contianer {
+      margin-top: 30px;
+      margin-bottom: 30px;
+  }
+
+  .addQBtb {
+      width: 160px;
+  }
+
+  .QL_header {
+      background-color: #004a7f; /* #00A896; */
+      text-align: center;
+      padding: 10px;
+      border-radius: 7px;
+      color: white;
+  }
+
+  .question {
+      padding: 7px;
+      width: 90%;
+      margin: 10px auto;
+      text-align: center;
+      border-radius: 5px;
+      color: black;
+      background-color: #9fcdff;
+      transition: width 0.3s;
+  }
+
+  .question:hover {
+      width: 93%;
+      border: 1px solid gray;
+  }
+
+
+  .questionsList {
+      list-style-type: none;
+  }
+
+  .newQuestion_collapse {
+      margin: 20px auto;
+      border: 1.5px solid gray;
+  }
+
+  .question_collapse {
+      width: 90%;
+      margin: 10px auto;
+      border: 1px solid gray;
+  }
+
+  .my_input_group_collapse {
+      margin: 10px auto;
+  }
+
+
+  .my_input_group {
+      margin: 20px auto;
+  }
+
+  .deleteQ_btn:hover {
+      opacity: 0.8;
+  }
+
+
+
+  @media only screen and (max-width: 572px) {
+    .QL_header{
+        font-size: 20px;
+    }
+
+    .my_container{
+
+        width: 95%;
+        margin: 20px auto;
+    }
+  }

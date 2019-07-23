@@ -1,0 +1,14 @@
+.my_container {
+    margin-top: 2%;
+    border-radius: 10px;
+    border: 1.5px solid gray;
+    padding: 30px;
+    box-shadow: 2px 2px 2px lightgray;
+    background-color: white;
+  }
+
+  .display-4 {
+    font-weight: 500;
+    margin: 25px 0;
+    font-size: 40px;
+}

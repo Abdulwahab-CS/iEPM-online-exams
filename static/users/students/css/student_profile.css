@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette&display=swap');
+
+.container {
+    padding: 10px;
+}
+
+.display-4 {
+    font-weight: 300;
+    margin: 20px 0;
+    font-size: 40px;
+}
+
+.jumbotron {
+    padding: 7px;
+    background-color: #004a7f;
+    box-shadow: 5px 5px gray;
+}
+
+#std_name {
+    font-weight: bold;
+}
+
+.startExamBtn {
+    display: block;
+    width: 250px;
+    margin: 0px auto;
+    margin-top: 50px;
+}
+
+.my_input_group {
+    margin: 7px 0px;
+}
+
+.top {
+    text-align: center;
+}
+
+.top_statement {
+    // font-family: 'Courgette', cursive;
+}
+
+
+
+
+
+th, td {
+    text-align: center;
+    border: 2px solid gray;
+}
+
+.table thead th {
+    border: 2px solid gray;
+}
+
+.table td, th {
+    vertical-align: middle;
+}
+
+table {
+    margin: 20px 0;
+}
+
+thead {
+    background-color: rgb(218, 214, 214);
+    color: black;
+}
+
+tbody {
+    background-color: white;
+    color: black;
+}
+
+.allExams_header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.1em;
+    text-shadow: 1px 1px 2px lightgray;
+}
+
+a, a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.showExam {
+    background-color: #05668D;
+    margin: 5px;
+    color: white;
+}
+
+.manageQuestions {
+    background-color: #00A896;
+    color: white;
+}
+
+.deleteBtn {
+    background-color: #F26868;
+    margin: 5px;
+    color: white;
+}
+
+.showExam:hover, .editBtn:hover, .deleteBtn:hover, .manageQuestions:hover {
+    opacity: 0.7;
+    color: white;
+}
+
+.noExams {
+    text-align: center;
+    border: 1px solid gray;
+    padding: 30px;
+    background-color: lightgray;
+    margin: 60px 0;
+}

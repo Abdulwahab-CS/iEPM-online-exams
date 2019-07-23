@@ -1,0 +1,76 @@
+
+.display-4 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.header {
+    text-align: center;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px gray;
+}
+
+table tr {
+    border-radius: 5px;
+}
+
+table, .scoresTable {
+    overflow: auto;
+}
+
+.container {
+    margin-top: 3.5%;
+}
+
+th, td {
+    text-align: center;
+    vertical-align: inherit;
+    border: 2px solid gray;
+}
+
+.table thead th {
+    border: 2px solid gray;
+    vertical-align: middle;
+}
+
+.table tbody td {
+    vertical-align: middle;
+}
+
+.table tbody tr th {
+    vertical-align: inherit;
+}
+
+table {
+    color: black;
+}
+
+thead {
+    background-color: rgb(189, 189, 189);
+    font-weight: 600;
+}
+
+tbody {
+    background-color: white;
+    font-weight: 600;
+}
+
+.sub_th {
+    background-color: #a3d3ae;
+    font-weight: 600;
+}
+
+.backBtn {
+    width: 80px;
+    float: left;
+    margin-right: 5px;
+}
+
+.empryScores {
+    text-align: center;
+    border: 1px solid gray;
+    background-color: lightgray;
+    margin: 30px 0;
+    color: black;
+}

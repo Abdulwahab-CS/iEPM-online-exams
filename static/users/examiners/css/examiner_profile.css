@@ -1,0 +1,31 @@
+
+.container {
+    padding: 10px
+}
+
+
+.display-4 {
+    font-weight: 300;
+    margin: 20px 0;
+    font-size: 38px;
+}
+
+
+.jumbotron {
+    padding: 7px;
+    background-color: #004a7f;
+    box-shadow: 5px 5px gray;
+}
+
+.list-group {
+    width: 250px;
+}
+
+.item {
+    margin: 10px;
+}
+
+
+.my_list {
+    text-align: center;
+}
