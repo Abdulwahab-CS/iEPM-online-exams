@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7b6d63f-d338-46d1-a324-2c2f74d37b6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +37,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="104" column="4" lean-forward="true" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+            <state relative-caret-position="342">
+              <caret line="90" column="91" selection-start-line="90" selection-start-column="91" selection-end-line="90" selection-end-column="91" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#2964#2971#1" expanded="true" />
@@ -132,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="685" />
     <option name="width" value="1235" />
     <option name="height" value="980" />
@@ -684,8 +684,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="104" column="4" lean-forward="true" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+        <state relative-caret-position="342">
+          <caret line="90" column="91" selection-start-line="90" selection-start-column="91" selection-end-line="90" selection-end-column="91" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="e#2964#2971#1" expanded="true" />
