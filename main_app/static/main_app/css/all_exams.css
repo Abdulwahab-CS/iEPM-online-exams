@@ -18,14 +18,16 @@ input[type='checkbox'] {
 th, td {
     text-align: center;
     border: 2px solid gray;
-}
-
-.table thead th {
-    border: 2px solid gray;
+    padding: 6px;
 }
 
 .table td, th {
     vertical-align: middle;
+}
+
+.table thead th {
+    vertical-align: inherit;
+    border: 2px solid gray;
 }
 
 .my-table {

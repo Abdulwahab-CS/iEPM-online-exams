@@ -32,13 +32,18 @@
     <!-- START navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" style="border-bottom: 2px solid black;">
 
-          <a class="navbar-brand" href="#"><img src="{% static 'main_app/imgs/iEPM_logo.png' %}" height="40px"></a>
+          <a class="navbar-brand"><img src="{% static 'main_app/imgs/iEPM_logo.png' %}" height="40px"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="nav-link" href="" data-toggle="modal" data-target="#exampleModalScrollable">About</a>
+              </li>
+            </ul>
 
             <ul class="navbar-nav ml-auto">
               {% block logout_in_navbar %}
@@ -49,6 +54,57 @@
         </nav>
     <!-- END navbar -->
 
+    <!-- Navbar Modals -->
+
+    <!-- Button trigger modal -->
+
+    <!-- Button trigger modal -->
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalScrollableTitle">About iEPM - Exams System</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <p>iEPM - Exams System (ES) is the all-in-one solution
+                for managing online exams at any educational or non educational institutions.
+                Optimize the students’ experience by reducing the operational risks which exams produce.
+                Save time and money in the examination process.</p>
+
+              <br><h6>There are two types of users: Examiners and Students</h6><br>
+
+              <h6><b>The Examiners have the following permissions:</b></h6>
+              <ul>
+                <li>Adding / Updating / Removing exams.</li>
+                <li>Adding / Updating / Removing questions in any exam.</li>
+                <li>Previewing the exam before publication.</li>
+                <li>Ability to publish and un-publish exams.</li>
+                <li>A table contains all created exams to easily access and manage any exam.</li>
+                <li>A table contains all students scores in all exams.</li>
+              </ul>
+
+              <h6><b>The Students can take infinite number of exams.</b></h6>
+              <p>Note: It is forbidden for the student to take the same exam twice !</p>
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+
+    <!-- End Navbar Modals -->
 
 
 
