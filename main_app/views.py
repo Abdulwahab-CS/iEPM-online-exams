@@ -123,6 +123,10 @@ def do_edit_exam(request, exam_id):
         name = request.POST.get('exam_name')
         category = request.POST.get('category')
 
+        # if nothing is changed
+        if exam.exam_name == name and exam.category == category:
+            return redirect("main:all_exams")
+
         # check if found exam with same name and category
         exams = Exam.objects.filter(examiner=request.user.myuser).exclude(id=exam_id)
         temp = exams.filter(exam_name__iexact=name, category__iexact=category)
