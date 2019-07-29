@@ -46,7 +46,7 @@
 
                         <div class="question">
                             <div class="question_body">
-                                <span class="question_number">Q{{ forloop.counter }} - </span>{{ question.body }}
+                                <span class="question_number">[Q{{ forloop.counter }}] </span>{{ question.body }}
                             </div>
                             <div class="radio option">
                                 <label><input type="radio" name="question-{{ forloop.counter }}-opts" value="1"> {{ question.op1 }}</label>

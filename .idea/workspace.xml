@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b7b6d63f-d338-46d1-a324-2c2f74d37b6c" name="Default Changelist" comment="" />
+    <list default="true" id="b7b6d63f-d338-46d1-a324-2c2f74d37b6c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" beforeDir="false" afterPath="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -9,38 +13,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/home.html">
+        <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/show_exam.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/sign_out_button.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="5" lean-forward="true" selection-start-line="1" selection-end-line="3" selection-end-column="5" />
+            <state relative-caret-position="202">
+              <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
+        <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/do_exam.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="90" column="91" selection-start-line="90" selection-start-column="91" selection-end-line="90" selection-end-column="91" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#2964#2971#1" expanded="true" />
-                <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -103,12 +90,10 @@
         <option value="$PROJECT_DIR$/templates/sign_out_button.html" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/edit_exam.html" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/manage_questions.html" />
-        <option value="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/students_scores.html" />
         <option value="$PROJECT_DIR$/main_app/static/main_app/css/add_exam.css" />
         <option value="$PROJECT_DIR$/users/templates/users/examiners/examiner_profile.html" />
         <option value="$PROJECT_DIR$/users/templates/users/students/student_profile.html" />
-        <option value="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/add_exam.html" />
         <option value="$PROJECT_DIR$/users/static/users/examiners/css/examiner_profile.css" />
         <option value="$PROJECT_DIR$/Procfile.py" />
@@ -126,6 +111,8 @@
         <option value="$PROJECT_DIR$/main_app/templates/main_app/all_exams.html" />
         <option value="$PROJECT_DIR$/main_app/templates/main_app/home.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/main_app/templates/main_app/show_exam.html" />
+        <option value="$PROJECT_DIR$/main_app/templates/main_app/do_exam.html" />
       </list>
     </option>
   </component>
@@ -155,13 +142,26 @@
         <subPane>
           <expand>
             <path>
-              <item name="iEPM_Online_Exams" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iEPM_Online_Exams" type="462c0819:PsiDirectoryNode" />
+              <item name="iepm-exams-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iepm-exams-system" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="iEPM_Online_Exams" type="b2602c69:ProjectViewProjectNode" />
-              <item name="iEPM_Online_Exams" type="462c0819:PsiDirectoryNode" />
+              <item name="iepm-exams-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iepm-exams-system" type="462c0819:PsiDirectoryNode" />
+              <item name="main_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iepm-exams-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iepm-exams-system" type="462c0819:PsiDirectoryNode" />
+              <item name="main_app" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="iepm-exams-system" type="b2602c69:ProjectViewProjectNode" />
+              <item name="iepm-exams-system" type="462c0819:PsiDirectoryNode" />
+              <item name="main_app" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="main_app" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -172,7 +172,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main_app/templates/main_app" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -217,8 +217,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19815059" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17635404" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -229,7 +230,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32956153" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.8387553" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.8387553" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -460,16 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/do_exam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding>
-            <element signature="e#3916#3922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/add_exam.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -523,13 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/show_exam.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="89" column="101" selection-start-line="89" selection-start-column="101" selection-end-line="89" selection-end-column="101" />
         </state>
       </provider>
     </entry>
@@ -661,32 +645,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="98" column="26" lean-forward="true" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#2964#2971#1" expanded="true" />
+            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/sign_out_button.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="3" column="5" lean-forward="true" selection-start-line="1" selection-end-line="3" selection-end-column="5" />
+          <caret line="3" column="5" selection-start-line="1" selection-end-line="3" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+        <state relative-caret-position="180">
+          <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/show_exam.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="90" column="91" selection-start-line="90" selection-start-column="91" selection-end-line="90" selection-end-column="91" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#2964#2971#1" expanded="true" />
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="202">
+          <caret line="43" column="34" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_app/templates/main_app/do_exam.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>

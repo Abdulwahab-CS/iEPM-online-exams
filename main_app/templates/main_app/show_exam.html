@@ -41,19 +41,19 @@
 
                           <div class="question">
                             <div class="question_body">
-                                Question <span>{{ forloop.counter }}</span> : <span>{{ question.body }}</span>
+                                [Q<span>{{ forloop.counter }}</span>] <span>{{ question.body }}</span>
                             </div>
                             <div class="option">
-                                <span>1</span> - <span>{{ question.op1 }}</span>
+                                (<span>1</span>) <span>{{ question.op1 }}</span>
                             </div>
                             <div class="option">
-                                <span>2</span> - <span>{{ question.op2 }}</span>
+                                (<span>2</span>) <span>{{ question.op2 }}</span>
                             </div>
                             <div class="option">
-                                <span>3</span> - <span>{{ question.op3 }}</span>
+                                (<span>3</span>) <span>{{ question.op3 }}</span>
                             </div>
                             <div class="option">
-                                <span>4</span> - <span>{{ question.op4 }}</span>
+                                (<span>4</span>) <span>{{ question.op4 }}</span>
                             </div>
                             <div class="correct_answer">
                                 Correct Answer Number : <span>{{ question.correct_ans }}</span>
